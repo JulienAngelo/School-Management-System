@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00103D"
+    tools:context=".Create_Account">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="-30dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/nav3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="130dp"
+                android:layout_marginBottom="14dp"
+                android:text="@string/createProfile"
+                android:textColor="#FFFEFE"
+                android:textSize="22sp" />
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="-25dp"
+                android:layout_marginBottom="-10dp"
+                android:src="@drawable/profile" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FF8C00"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+
+                <EditText
+
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/edit"
+                    android:drawableLeft="@drawable/student_index"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/index"
+                    android:inputType="textLongMessage"
+                    android:padding="20dp"
+                    android:textColorHint="#780000" />
+
+                <EditText
+
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/edit"
+                    android:drawableLeft="@drawable/student_index"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/fullName"
+                    android:inputType="textLongMessage"
+                    android:padding="20dp"
+                    android:textColorHint="#780000" />
+
+                <EditText
+
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/edit"
+                    android:drawableLeft="@drawable/student_date"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/dob"
+                    android:inputType="date"
+                    android:padding="20dp"
+                    android:textColorHint="#780000" />
+
+                <EditText
+
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/edit"
+                    android:drawableLeft="@drawable/student_index"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/gaurdianName"
+                    android:inputType="date"
+                    android:padding="20dp"
+                    android:textColorHint="#780000" />
+
+
+
+                <EditText
+
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/edit"
+                    android:drawableLeft="@drawable/student_address"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/address"
+                    android:inputType="date"
+                    android:padding="20dp"
+                    android:textColorHint="#780000" />
+
+                <EditText
+
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/edit"
+                    android:drawableLeft="@drawable/student_date"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/admissionDate"
+                    android:inputType="date"
+                    android:padding="20dp"
+                    android:textColorHint="#780000" />
+
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button"
+                    android:text="@string/btncreateUser"
+                    android:textColor="#fff" />
+
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/button"
+                    android:text="@string/btnResetUser"
+                    android:textColor="#fff" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

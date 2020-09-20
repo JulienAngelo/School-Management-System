@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00103D"
+    tools:context=".VeiwStudentProfile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="70sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="20sp">
+
+            <ImageView
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="-30sp"
+                android:layout_marginBottom="4sp"
+                android:src="@drawable/nav3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="130sp"
+                android:layout_marginBottom="14sp"
+                android:text="@string/app_name"
+                android:textColor="#FFFEFE"
+                android:textSize="22sp" />
+            <ImageView
+                android:layout_width="90sp"
+                android:layout_height="90sp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="-25sp"
+                android:layout_marginBottom="-10sp"
+                android:src="@drawable/profile" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="600pt"
+                android:layout_gravity="center"
+                android:background="#FF8C00"
+                android:layout_margin="21sp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="200sp"
+                    android:layout_height="182sp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20sp"
+                    app:srcCompat="@drawable/profile" />
+
+                <TextView
+                    android:layout_width="206sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginLeft="10sp"
+                    android:fontFamily="sans-serif"
+                    android:text="Index Number"
+                    android:textColor="#780000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="158sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="-30sp"
+                    android:text="IT19067902" />
+
+                <TextView
+                    android:layout_width="206sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginLeft="10sp"
+                    android:fontFamily="sans-serif"
+                    android:text="Full Name"
+                    android:textColor="#780000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/full_name"
+                    android:layout_width="158sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="-30sp"
+                    android:text="Mathew Joseph" />
+
+                <TextView
+                    android:layout_width="206sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginLeft="10sp"
+                    android:fontFamily="sans-serif"
+                    android:text="Date of Birth"
+                    android:textColor="#780000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/dob"
+                    android:layout_width="158sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="-30sp"
+                    android:text="1998.09.04" />
+
+                <TextView
+                    android:layout_width="206sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginLeft="10sp"
+                    android:fontFamily="sans-serif"
+                    android:text="Contact Number"
+                    android:textColor="#780000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/contact"
+                    android:layout_width="158sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="-30sp"
+                    android:text="0752170350" />
+
+                <TextView
+                    android:layout_width="206sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginLeft="10sp"
+                    android:fontFamily="sans-serif"
+                    android:text="Parent / Guardian Name"
+                    android:textColor="#780000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/parent_guardian"
+                    android:layout_width="158sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="-30sp"
+                    android:text="Mark Anthony" />
+
+
+                <TextView
+                    android:layout_width="206sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginLeft="10sp"
+                    android:fontFamily="sans-serif"
+                    android:text="Address"
+                    android:textColor="#780000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="158sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="-30sp"
+                    android:text="No.45 Temple Road Colombo 03" />
+
+
+                <TextView
+                    android:layout_width="206sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginLeft="10sp"
+                    android:fontFamily="sans-serif"
+                    android:text="Admission Date"
+                    android:textColor="#780000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="158sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="-30sp"
+                    android:layout_marginLeft="10sp"
+                    android:text="2000.09.20" />
+
+
+                <TextView
+                    android:layout_width="206sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginLeft="10sp"
+                    android:fontFamily="sans-serif"
+                    android:text="Age"
+                    android:textColor="#780000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="158sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="-30sp"
+                    android:text="25" />
+
+                <Button
+                    android:layout_width="300sp"
+                    android:layout_height="60sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="20sp"
+                    android:background="@drawable/button"
+                    android:text="Edit Profile"
+                    android:textColor="#fff" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

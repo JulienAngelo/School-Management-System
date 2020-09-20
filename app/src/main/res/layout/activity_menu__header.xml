@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:paddingLeft="15dp"
+    android:background="@drawable/navbar"
+    tools:context=".Menu_Header">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:layout_width="127dp"
+            android:layout_height="116dp"
+            android:layout_marginLeft="68dp"
+            android:src="@drawable/pro" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:layout_marginTop="115dp"
+            android:fontFamily="cursive"
+            android:id="@+id/app_name"
+            android:text="David Oodugama"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/menu_slogan"
+            android:layout_above="@id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="35dp"
+            android:layout_marginBottom="27dp"
+            android:fontFamily="cursive"
+            android:text="@string/slogan"
+            android:textColor="#FFFFFF" />
+
+    </RelativeLayout>
+</LinearLayout>

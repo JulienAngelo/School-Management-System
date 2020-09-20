@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Issue_Review">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="900dp"
+            android:layout_height="700dp"
+            android:src="@drawable/issue_header"
+            android:layout_marginTop="-400dp"
+            android:layout_marginLeft="-180dp"/>
+
+
+        <ImageView
+            android:layout_width="330dp"
+            android:layout_height="340dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/issue_rectangle" />
+
+
+
+        <EditText
+            android:layout_width="285dp"
+            android:layout_height="200dp"
+            android:hint="Enter Issue here"
+
+            android:textSize="24sp"
+            android:gravity="center"
+            android:layout_marginTop="-300dp"
+            android:layout_marginLeft="37dp"
+            android:textColorHint="#969696"
+            android:inputType="textLongMessage"/>
+
+        <ImageView
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:src="@drawable/issue_submit"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"/>
+    </LinearLayout>
+
+
+</ScrollView>

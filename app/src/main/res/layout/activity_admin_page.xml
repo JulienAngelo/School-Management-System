@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:openDrawer="start"
+    tools:context=".AdminPage">
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#FFFFFF"
+        app:headerLayout="@layout/activity_menu__header"
+        app:menu="@menu/main_menu" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        >
+
+        <ImageView
+            android:src="@drawable/admin_header"
+            android:scaleType="fitXY"
+            android:layout_width="600dp"
+            android:layout_height="510dp"
+            android:layout_marginTop="-460dp"
+            android:layout_marginStart="-90dp"
+            android:contentDescription="@string/descrption" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/nav3"
+            android:layout_marginStart="-510dp"
+            android:contentDescription="@string/nav3" />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/logout"
+            android:layout_marginStart="269dp"
+            android:layout_marginTop="9dp"
+            android:contentDescription="@string/logout" />
+
+        <ImageView
+            android:layout_width="580dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="500dp"
+            android:layout_marginStart="-460dp"
+            android:src="@drawable/admin_footer"
+            android:contentDescription="@string/admin_footer" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="400dp"
+            android:layout_height="151dp"
+            android:src="@drawable/header_name"
+            android:layout_marginTop="48dp"
+            android:contentDescription="@string/admin_header_name" />
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/pro"
+            android:layout_marginTop="62dp"
+            android:layout_marginStart="20dp"
+            android:contentDescription="@string/admin_header_logo" />
+        <TextView
+            android:id="@+id/admin_header_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="David Oodugama"
+            android:textSize="20sp"
+            android:layout_marginTop="120dp"
+            android:layout_marginStart="140dp"
+            android:textColor="#FFFFFF"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome"
+            android:textSize="24sp"
+            android:layout_marginTop="80dp"
+            android:layout_marginStart="140dp"
+            android:textColor="#FFFFFF"/>
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/add_payment"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="220dp"
+            />
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/add_student"
+            android:layout_marginTop="220dp"
+            android:layout_marginStart="200dp"/>
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="140dp"
+            android:src="@drawable/financial_dashboard"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="360dp"/>
+    </RelativeLayout>
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

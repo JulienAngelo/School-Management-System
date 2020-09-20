@@ -1,0 +1,90 @@
+<resources>
+
+    <!--                    DAVID                        -->
+
+    <string name="app_name">Student Info</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="profile">Profile</string>
+    <string name="login">Login</string>
+    <string name="logout">LogOut</string>
+    <string name="slogan">Committed To Excellence In Education</string>
+    <string name="logo">School Management</string>
+    <string name="Issue">If you have any Issues regarding fees or any other issue we would like to know it. </string>
+    <string name="expire">password expire in 365 days left</string>
+    <string name="Financial_tot_Payment">Total Payments:</string>
+    <string name="Financial_tot_Balance">Total Balance:</string>
+    <string name="Financial_tot_Spending">Total Spending:</string>
+    <string name="Financial_Dashboard">Financial DashBoard</string>
+
+    <!--                    DANANJAYA                     -->
+
+    <string name="St_Full_Pay">Full Payment: </string>
+    <string name="St_Balance">Balance</string>
+    <string name="term1">FIRST TERM</string>
+    <string name="term2">SECOND TERM</string>
+    <string name="term3">THIRD TERM</string>
+    <string name="st_Paid_amount">Paid Amount</string>
+    <string name="st_due_amount">Due Amount</string>
+    <string name="admin_ref_no">Ref no</string>
+    <string name="admin_name">Name</string>
+    <string name="admin_term">Term</string>
+    <string name="admin_payment">Payment</string>
+    <string name="admin_date">Date</string>
+
+    <!--                    ANGELO                        -->
+
+    <string name="index">Index Number</string>
+    <string name="createProfile">Create Profile</string>
+    <string name="fullName">Full Name</string>
+    <string name="dob">Date of Birth</string>
+    <string name="gaurdianName">Parent / Guardian</string>
+    <string name="address">Permanent Address</string>
+    <string name="admissionDate">Admission Date</string>
+    <string name="btncreateUser">Create Profile</string>
+    <string name="btnResetUser">Reset</string>
+    <string name="st_pro">EDIT PROFILE</string>
+
+
+    <!--                    MIYURU                         -->
+
+    <string name="new_students_list">New Students List</string>
+    <string name="index_number">Index Number</string>
+    <string name="std_list_index_1">STID20001</string>
+    <string name="student_name">Student\'s Name</string>
+    <string name="std_list_name_1">Avishka Perera</string>
+    <string name="view_button">View</string>
+    <string name="std_list_index_2">STID20002</string>
+    <string name="std_list_index_3">STID20003</string>
+    <string name="std_list_name_2">Dilshan Wijerathna</string>
+    <string name="std_list_name_3">Keshan Fernando</string>
+    <string name="student_info">Student Info</string>
+    <string name="std_full_name">Full Name</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="parent_or_guardian">Parent / Guardian</string>
+    <string name="parent_or_guardian_name">Parent / Guardian Name</string>
+    <string name="permanent_address">Permanent Address</string>
+    <string name="admission_date">Admission Date</string>
+    <string name="add_password">Add Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="submit_button">Submit</string>
+    <string name="reject_button">Reject</string>
+    <string name="pw_required">password is required.</string>
+    <string name="pw_pattern">Password should be consist of Aa-Zz letters, 0 - 9 Numbers.</string>
+    <string name="pw_not_match">password not match.</string>
+    <string name="pw_length">password length must be 8.</string>
+    <string name="pw_confirm">Please confirm password.</string>
+    <string name="user_name_length">user name length can not be greater than 8 characters.</string>
+    <string name="user_name_required">User name is required.</string>
+    <string name="success_message">user name, password sent to student successfully.</string>
+    <string name="reject_pressed">Do you want to reject the student?</string>
+    <string name="reject_success">student rejected.</string>
+    <string name="descrption">admin</string>
+    <string name="nav3">nav3</string>
+    <string name="admin_footer">admin_footer</string>
+    <string name="admin_header_name">admin_header_name</string>
+    <string name="admin_header_logo">admin_header_logo</string>
+    <string name="welcome">Welcome</string>
+
+
+</resources>

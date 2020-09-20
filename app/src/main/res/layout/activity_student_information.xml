@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start"
+    android:id="@+id/student_drawer_layout"
+    tools:context=".Student_information">
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/student_navigation_view"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#FFFFFF"
+        app:headerLayout="@layout/activity_menu__header"
+        app:menu="@menu/main_menu" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:src="@drawable/student_header"
+            android:scaleType="fitXY"
+            android:layout_width="600dp"
+            android:layout_height="310dp"
+            android:layout_marginTop="-260dp"
+            android:layout_marginLeft="-90dp"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/nav3"
+            android:layout_marginLeft="-510dp"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/logout"
+            android:layout_marginTop="9dp"
+            android:layout_marginLeft="270dp"/>
+        <ImageView
+            android:layout_width="380dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="500dp"
+            android:layout_marginLeft="-361dp"
+            android:src="@drawable/admin_footer" />
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/studentPro"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/student_profile"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="220dp"
+            />
+        <ImageView
+            android:id="@+id/st_dashboard"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/student_dash_board"
+            android:layout_marginTop="220dp"
+            android:layout_marginLeft="200dp"/>
+
+        <ImageView
+            android:id="@+id/st_issue_review"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/issue_review"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="360dp"/>
+
+
+        <ImageView
+            android:layout_width="400dp"
+            android:layout_height="151dp"
+            android:src="@drawable/header_name"
+            android:layout_marginTop="48dp"/>
+
+
+        <ImageView
+            android:id="@+id/st_pro_img"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/pro"
+            android:layout_marginTop="62dp"
+            android:layout_marginLeft="20dp"/>
+        <TextView
+            android:id="@+id/st_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dana"
+            android:textSize="20sp"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="140dp"
+            android:textColor="#FFFFFF"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome"
+            android:textSize="24sp"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="140dp"
+            android:textColor="#FFFFFF"/>
+
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
