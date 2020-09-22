@@ -71,7 +71,7 @@
     <string name="submit_button">Submit</string>
     <string name="reject_button">Reject</string>
     <string name="pw_required">password is required.</string>
-    <string name="pw_pattern">Password should be consist of Aa-Zz letters, 0 - 9 Numbers.</string>
+    <string name="pw_pattern">Password should be consist of Aa–Zz letters, 0 – 9 Numbers.</string>
     <string name="pw_not_match">password not match.</string>
     <string name="pw_length">password length must be 8.</string>
     <string name="pw_confirm">Please confirm password.</string>
@@ -90,6 +90,12 @@
     <string name="payment">TODO</string>
     <string name="add_student">TODO</string>
     <string name="financial_dashboard">TODO</string>
+    <string name="issue_header">TODO</string>
+    <string name="issue_description_header">TODO</string>
+    <string name="rectangle_issue">TODO</string>
+    <string name="enter_student_id_here">Enter Student Id here</string>
+    <string name="enter_your_description_here">Enter your description here</string>
+    <string name="submit_issue">TODO</string>
 
 
 </resources>
