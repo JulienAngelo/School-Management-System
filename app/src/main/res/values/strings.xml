@@ -3,6 +3,7 @@
     <!--                    DAVID                        -->
 
     <string name="app_name">Student Info</string>
+
     <string name="home">Home</string>
     <string name="search">Search</string>
     <string name="profile">Profile</string>
@@ -85,6 +86,10 @@
     <string name="admin_header_name">admin_header_name</string>
     <string name="admin_header_logo">admin_header_logo</string>
     <string name="welcome">Welcome</string>
+    <string name="david_oodugama">David Oodugama</string>
+    <string name="payment">TODO</string>
+    <string name="add_student">TODO</string>
+    <string name="financial_dashboard">TODO</string>
 
 
 </resources>
