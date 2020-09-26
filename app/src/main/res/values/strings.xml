@@ -96,6 +96,15 @@
     <string name="enter_student_id_here">Enter Student Id here</string>
     <string name="enter_your_description_here">Enter your description here</string>
     <string name="submit_issue">TODO</string>
+    <string name="issue_logout">TODO</string>
+    <string name="starting">TODO</string>
+    <string name="student_header">TODO</string>
+    <string name="student_logo">TODO</string>
+    <string name="student_profile">TODO</string>
+    <string name="student_dash_board">TODO</string>
+    <string name="issue_review">TODO</string>
+    <string name="dana">Dana</string>
+    <string name="pro_img">TODO</string>
 
 
 </resources>
