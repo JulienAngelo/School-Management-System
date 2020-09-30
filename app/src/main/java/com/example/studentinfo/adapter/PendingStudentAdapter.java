@@ -8,11 +8,13 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.studentinfo.PendingStudentList;
 import com.example.studentinfo.R;
 import com.example.studentinfo.domain.PendingStudent;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -87,8 +89,9 @@ public class PendingStudentAdapter extends FirebaseRecyclerAdapter<PendingStuden
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(holder.img.getContext());
-                builder.setTitle("Delete Pending Student");
-                builder.setMessage("Are sure you want to delete?");
+                builder.setTitle("Reject Pending Student");
+                builder.setMessage("Are sure you want to reject?");
+                builder.setIcon(R.drawable.warning);
 
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override

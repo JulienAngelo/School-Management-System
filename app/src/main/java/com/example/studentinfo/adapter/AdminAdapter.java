@@ -90,6 +90,7 @@ public class AdminAdapter extends FirebaseRecyclerAdapter<Admin, AdminAdapter.My
                 AlertDialog.Builder builder = new AlertDialog.Builder(holder.img.getContext());
                 builder.setTitle("Delete Admin");
                 builder.setMessage("Are sure you want to delete?");
+                builder.setIcon(R.drawable.warning);
 
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override

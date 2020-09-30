@@ -41,7 +41,7 @@
     <ImageView
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:src="@drawable/updatebtn"
+        android:src="@drawable/approvebtn"
         android:id="@+id/pSTDUSubmitBtnId"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"

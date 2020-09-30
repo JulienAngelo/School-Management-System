@@ -98,7 +98,7 @@
                         android:id="@+id/adminSubmit"
                         android:layout_width="310dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/issue_submit"
+                        android:src="@drawable/addadminbtn"
                         android:layout_marginTop="50dp"
                         android:layout_marginStart="25dp"
                         android:contentDescription="@string/submit_issue" />

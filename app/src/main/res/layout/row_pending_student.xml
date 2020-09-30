@@ -79,7 +79,7 @@
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:id="@+id/pStdDeleteIconId"
-                android:src="@drawable/deletebtn"
+                android:src="@drawable/rejectbtn"
                 android:layout_marginLeft="28dp"
                 />
 

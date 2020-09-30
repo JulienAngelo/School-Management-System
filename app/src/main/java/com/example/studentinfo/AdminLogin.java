@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class AdminLogin extends AppCompatActivity {
 
-    private ImageView submitButton;
+    ImageView submitButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
