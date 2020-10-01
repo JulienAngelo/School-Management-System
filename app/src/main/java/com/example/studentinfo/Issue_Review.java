@@ -1,8 +1,5 @@
 package com.example.studentinfo;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -12,6 +9,10 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.studentinfo.domain.Issue;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -38,13 +39,11 @@ public class Issue_Review extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_issue__review);
 
-
         issue_student_id = findViewById(R.id.issue_student_id);
         issue_description = findViewById(R.id.issue_description);
         issue_submit = findViewById(R.id.issue_submit);
-        member = new Issue_memeber() ;
-        reference = FirebaseDatabase.getInstance().getReference().child("Issue_review").push().child("Issue_Type");
-
+        member = new Issue_memeber();
+        reference = FirebaseDatabase.getInstance().getReference("Issue_Review");
         final Spinner spinner = findViewById(R.id.spinner);
 
         final List<String> IssueType = new ArrayList<>();
@@ -52,8 +51,6 @@ public class Issue_Review extends AppCompatActivity {
         IssueType.add("Payment");
         IssueType.add("Attendance");
         IssueType.add("Other");
-
-
 
        final ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(Issue_Review.this, android.R.layout.simple_list_item_1,
                IssueType);
@@ -88,23 +85,15 @@ public class Issue_Review extends AppCompatActivity {
         issue_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            int  student_Id =  Integer.parseInt(issue_student_id.getText().toString());
-            String description = issue_description.getText().toString();
-            if(student_Id == 0){
-            Toast.makeText(Issue_Review.this,"Student id can not be blank or 0!",Toast.LENGTH_SHORT).show();
-            }else{
-                FirebaseDatabase.getInstance().getReference().child("Issue_review").push().child("Student_ID").setValue(student_Id);
-            }
 
-            if(description.isEmpty()){
-                Toast.makeText(Issue_Review.this,"Description can not be blank",Toast.LENGTH_SHORT).show();
-            }else{
-                FirebaseDatabase.getInstance().getReference().child("Issue_review").push().child("Issue_Description").setValue(description);
-            }
-        member.setSpinner(spinner.getSelectedItem().toString());
+                int  student_Id =  Integer.parseInt(issue_student_id.getText().toString());
+                String description = issue_description.getText().toString();
+                String spinner_issue = spinner.getSelectedItem().toString();
+
+                    Issue issue = new Issue(student_Id,description,spinner_issue);
+                    reference.child(String.valueOf(student_Id)).setValue(issue);
                 Toast.makeText(Issue_Review.this,"Thank you for your response.",Toast.LENGTH_LONG).show();
 
-                reference.child(String.valueOf(maxid+1)).setValue(member);
             }
         });
 
