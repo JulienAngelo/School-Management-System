@@ -110,5 +110,4 @@
     <string name="admin_first_name_hint">First Name</string>
     <string name="admin_last_name_hint">Last Name</string>
     <string name="add_admin_button">Add New Admin</string>
-
 </resources>
