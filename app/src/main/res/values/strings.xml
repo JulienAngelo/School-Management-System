@@ -105,6 +105,9 @@
     <string name="issue_review">TODO</string>
     <string name="dana">Dana</string>
     <string name="pro_img">TODO</string>
-
-
+    <string name="add_admin">TODO</string>
+    <string name="admin_id_hint">Admin ID</string>
+    <string name="admin_first_name_hint">First Name</string>
+    <string name="admin_last_name_hint">Last Name</string>
+    <string name="add_admin_button">Add New Admin</string>
 </resources>
