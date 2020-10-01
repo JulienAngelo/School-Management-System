@@ -39,11 +39,12 @@ public class Issue_Review extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_issue__review);
 
+
         issue_student_id = findViewById(R.id.issue_student_id);
         issue_description = findViewById(R.id.issue_description);
         issue_submit = findViewById(R.id.issue_submit);
-        member = new Issue_memeber();
         reference = FirebaseDatabase.getInstance().getReference("Issue_Review");
+
         final Spinner spinner = findViewById(R.id.spinner);
 
         final List<String> IssueType = new ArrayList<>();
@@ -51,6 +52,8 @@ public class Issue_Review extends AppCompatActivity {
         IssueType.add("Payment");
         IssueType.add("Attendance");
         IssueType.add("Other");
+
+
 
        final ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(Issue_Review.this, android.R.layout.simple_list_item_1,
                IssueType);
@@ -86,13 +89,17 @@ public class Issue_Review extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                database = FirebaseDatabase.getInstance();
+                reference = FirebaseDatabase.getInstance().getReference("Issue_Review");
+
                 int  student_Id =  Integer.parseInt(issue_student_id.getText().toString());
                 String description = issue_description.getText().toString();
-                String spinner_issue = spinner.getSelectedItem().toString();
+                String spinner1 = spinner.getSelectedItem().toString();
 
-                    Issue issue = new Issue(student_Id,description,spinner_issue);
-                    reference.child(String.valueOf(student_Id)).setValue(issue);
+                Issue issue = new Issue(student_Id,description,spinner1);
+                reference.child(String.valueOf(student_Id)).setValue(issue);
                 Toast.makeText(Issue_Review.this,"Thank you for your response.",Toast.LENGTH_LONG).show();
+
 
             }
         });
