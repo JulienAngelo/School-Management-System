@@ -73,11 +73,13 @@ public class PendingStudentAdapter extends FirebaseRecyclerAdapter<PendingStuden
                             @Override
                             public void onSuccess(Void aVoid) {
                                 dialogPlus.dismiss();
+                                Toast.makeText(holder.img.getContext(), "Successfully Updated.", Toast.LENGTH_SHORT).show();
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
                                 dialogPlus.dismiss();
+                                Toast.makeText(holder.img.getContext(), "Error when updating!", Toast.LENGTH_SHORT).show();
                             }
                         });
                     }
@@ -97,6 +99,7 @@ public class PendingStudentAdapter extends FirebaseRecyclerAdapter<PendingStuden
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         FirebaseDatabase.getInstance().getReference().child("PendingStudent").child(getRef(position).getKey()).removeValue();
+                        Toast.makeText(holder.img.getContext(), "Successfully Rejected.", Toast.LENGTH_SHORT).show();
                     }
                 });
 

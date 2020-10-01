@@ -2,6 +2,7 @@ package com.example.studentinfo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -55,11 +56,13 @@ public class AdminAdd extends AppCompatActivity {
                         admin.setFirstName(txtFirstName.getText().toString().trim());
                         admin.setLastName(txtLastName.getText().toString().trim());
 
-                        dbRef.push().setValue(admin);
-                        //dbRef.child("Admin1").setValue(admin);
+                        dbRef.child(admin.getAdminId()).setValue(admin);
 
                         Toast.makeText(getApplicationContext(), "Admin created successfully", Toast.LENGTH_SHORT).show();
                         clearControls();
+
+                        Intent adminList = new Intent(AdminAdd.this, AdminList.class);
+                        startActivity(adminList);
                     }
                 } catch (NumberFormatException e) {
                     Toast.makeText(getApplicationContext(), "Invalid Contact Number", Toast.LENGTH_SHORT).show();

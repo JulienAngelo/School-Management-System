@@ -16,6 +16,13 @@
             android:layout_width="match_parent"
             android:layout_height="77dp">
 
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginStart="2dp"
+                android:src="@drawable/nav3" />
+
             <EditText
                 android:id="@+id/adminSearchBoxId"
                 android:layout_width="220dp"

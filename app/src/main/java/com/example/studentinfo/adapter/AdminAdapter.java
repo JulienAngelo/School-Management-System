@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -72,11 +73,13 @@ public class AdminAdapter extends FirebaseRecyclerAdapter<Admin, AdminAdapter.My
                                 @Override
                                 public void onSuccess(Void aVoid) {
                                     dialogPlus.dismiss();
+                                    Toast.makeText(holder.img.getContext(), "Successfully Updated.", Toast.LENGTH_SHORT).show();
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
                                 public void onFailure(@NonNull Exception e) {
                                     dialogPlus.dismiss();
+                                    Toast.makeText(holder.img.getContext(), "Error when updating!", Toast.LENGTH_SHORT).show();
                                 }
                             });
                         }
@@ -96,6 +99,7 @@ public class AdminAdapter extends FirebaseRecyclerAdapter<Admin, AdminAdapter.My
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         FirebaseDatabase.getInstance().getReference().child("Admin").child(getRef(position).getKey()).removeValue();
+                        Toast.makeText(holder.img.getContext(), "Successfully Deleted.", Toast.LENGTH_SHORT).show();
                     }
                 });
 

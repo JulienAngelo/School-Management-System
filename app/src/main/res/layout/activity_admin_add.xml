@@ -19,7 +19,7 @@
             <ImageView
                 android:layout_width="400dp"
                 android:layout_height="57dp"
-                android:src="@drawable/issue_review_header"
+                android:src="@drawable/admincreateheader"
                 android:contentDescription="@string/issue_header" />
             <ImageView
                 android:layout_width="50dp"
