@@ -1,6 +1,6 @@
 package com.example.studentinfo.adapter;
 
-import android.app.AlertDialog;
+    import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.studentinfo.PendingStudentList;
 import com.example.studentinfo.R;
 import com.example.studentinfo.domain.PendingStudent;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;

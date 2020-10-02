@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1099258302168-vofr4m4ve54mjp14u5gakbqelgpsfd4i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.studentinfo",
+            "certificate_hash": "44422f52bc4b8b3a76fea1f7baece5c2fb4cf532"
+          }
+        },
+        {
           "client_id": "1099258302168-3p2s7sb3m5rh1ndq7tt6hs2g30kn5sl4.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -30,6 +38,35 @@
             "certificate_hash": "3056fc39273ff925a48b5f642f6ec72e91f380b3"
           }
         },
+        {
+          "client_id": "1099258302168-a466uqh2r7vupojti59ga505d81ats53.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1whF6wLmQaSYq9ncpKYVr-ia4LpCqT_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1099258302168-a466uqh2r7vupojti59ga505d81ats53.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1099258302168:android:394c4b4844a640a24351ad",
+        "android_client_info": {
+          "package_name": "com.velasuez.dashboard01.Dashboard01"
+        }
+      },
+      "oauth_client": [
         {
           "client_id": "1099258302168-a466uqh2r7vupojti59ga505d81ats53.apps.googleusercontent.com",
           "client_type": 3
