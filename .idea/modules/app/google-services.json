@@ -15,6 +15,17 @@
       },
       "oauth_client": [
         {
+<<<<<<< HEAD
+=======
+          "client_id": "1099258302168-3p2s7sb3m5rh1ndq7tt6hs2g30kn5sl4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.studentinfo",
+            "certificate_hash": "e2b838c5e2272933d1700eb84796e39389c60157"
+          }
+        },
+        {
+>>>>>>> d23726da91bcab70442df4a6b297638fd97f9064
           "client_id": "1099258302168-d9bj8usoa9mt7bm6sqhengm30vre37cu.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

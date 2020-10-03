@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.studentinfo">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="false"
@@ -12,17 +14,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ViewStudent"/>
-        <activity android:name=".AdminPage" />
-        <activity android:name=".Login" />
+        <activity android:name=".PendingStudentList"></activity>
+        <activity android:name=".AdminList" />
+        <activity android:name=".AdminView" />
+        <activity android:name=".AdminAdd" /> <!-- activity android:name=".AdminLogin"/ -->
+        <activity android:name=".Starting_page" />
         <activity android:name=".Student_welcome_page" />
         <activity android:name=".Student_information" />
-        <activity android:name=".Financial_Dashboard" />
-        <activity android:name=".Menu_Header" />
-        <activity android:name=".Starting_page" />
         <activity android:name=".Issue_Review" />
+        <activity android:name=".Login" />
+        <activity android:name=".Menu_Header" />
+        <activity android:name=".AdminPage" />
+        <activity android:name=".Financial_Dashboard" />
         <activity android:name=".VeiwStudentProfile" />
         <activity android:name=".NewStudentInfo" />
-        <activity android:name=".NewStudentsList" />
         <activity android:name=".Create_Account" />
         <activity android:name=".DashBoard" />
         <activity android:name=".Student_DashBoard" />
