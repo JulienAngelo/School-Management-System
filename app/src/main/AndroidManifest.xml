@@ -4,14 +4,16 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:hardwareAccelerated="false"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Login"></activity>
+        <activity android:name=".ViewStudent"/>
+        <activity android:name=".AdminPage" />
+        <activity android:name=".Login" />
         <activity android:name=".Student_welcome_page" />
         <activity android:name=".Student_information" />
         <activity android:name=".Financial_Dashboard" />
@@ -24,7 +26,7 @@
         <activity android:name=".Create_Account" />
         <activity android:name=".DashBoard" />
         <activity android:name=".Student_DashBoard" />
-        <activity android:name=".AdminPage">
+        <activity android:name=".SignUp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
