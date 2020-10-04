@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PendingStudentAdd"></activity>
+        <activity android:name=".PendingStudentAdd"/>
+        <activity android:name=".ViewStudent"/>
         <activity android:name=".PendingStudentList" />
         <activity android:name=".AdminList" />
         <activity android:name=".AdminView" />
@@ -32,7 +33,7 @@
         <activity android:name=".Create_Account" />
         <activity android:name=".DashBoard" />
         <activity android:name=".Student_DashBoard" />
-        <activity android:name=".AdminLogin">
+        <activity android:name=".SignUp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
