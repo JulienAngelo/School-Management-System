@@ -1,12 +1,18 @@
 package com.example.studentinfo;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
+
 import com.example.studentinfo.Database.SignUpHelper;
 import com.google.firebase.FirebaseApiNotAvailableException;
 import com.google.firebase.database.DataSnapshot;
@@ -19,6 +25,7 @@ import java.util.ArrayList;
 public class SignUp extends AppCompatActivity {
 
     EditText AdmissionNo, StudentFullName, StudentDOB, ParentNIC, ParentName, ParentContact, Address, AdmissionDate;
+
 
     Button SignUp;
 
@@ -43,6 +50,8 @@ public class SignUp extends AppCompatActivity {
         AdmissionDate = findViewById(R.id.admission_date);
         SignUp = findViewById(R.id.signUp);
 
+
+
         //save data in firebase on button click
         SignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,25 +69,86 @@ public class SignUp extends AppCompatActivity {
                 String address = Address.getText().toString();
                 String admissionDate = AdmissionDate.getText().toString();
 
-
-
-                //SignUpHelper signuphelper = new SignUpHelper();
-
                 SignUpHelper signuphelper  = new SignUpHelper(admissionNo,studentFullName,studentDOB,parentNIC,parentName,parentContact,address,admissionDate);
 
                 reference.child(admissionNo).setValue(signuphelper);
 
+                checkFields();
 
-                openDialog();
+                //openDialog();
             }
         });
 
     }
 
-                 public void openDialog(){
+                        public void imageClick(View view) {
+
+                            Intent goToLogin = new Intent(this ,Login.class);
+
+                            startActivity(goToLogin);
+                    }
+
+                        public void openDialog(){
 
                         SignUpDialog signupdialog = new SignUpDialog();
                         signupdialog.show(getSupportFragmentManager(), "Sign Up Dialog");
+
+
+    }
+
+    private void checkFields()
+    {
+
+        String admissionNo = AdmissionNo.getText().toString();
+        String studentFullName = StudentFullName.getText().toString();
+        String studentDOB = StudentDOB.getText().toString();
+        String parentNIC = ParentNIC.getText().toString();
+        String parentName = ParentName.getText().toString();
+        String parentContact = ParentContact.getText().toString();
+        String address = Address.getText().toString();
+        String admissionDate = AdmissionDate.getText().toString();
+        if(TextUtils.isEmpty(admissionNo)) {
+            Toast.makeText(this, "Please enter the Admission Number", Toast.LENGTH_SHORT).show();
+        }
+
+
+        else if(TextUtils.isEmpty(studentFullName)){
+            Toast.makeText(this,"Please enter the Fullname",Toast.LENGTH_SHORT).show();
+        }
+
+
+        else if(TextUtils.isEmpty(studentDOB)){
+            Toast.makeText(this,"Please enter the Student Date of Birth",Toast.LENGTH_SHORT).show();
+        }
+
+
+        else if(TextUtils.isEmpty(parentName)){
+            Toast.makeText(this,"Please enter the Parent NIC",Toast.LENGTH_SHORT).show();
+        }
+
+
+        else if(TextUtils.isEmpty(parentNIC)){
+            Toast.makeText(this,"Please enter the Parent Name",Toast.LENGTH_SHORT).show();
+        }
+
+
+        else if(TextUtils.isEmpty(address)){
+            Toast.makeText(this,"Please enter the Parent Contact Number",Toast.LENGTH_SHORT).show();
+        }
+
+
+        else if(TextUtils.isEmpty(parentContact)){
+            Toast.makeText(this,"Please enter the Address",Toast.LENGTH_SHORT).show();
+        }
+
+
+        else if(TextUtils.isEmpty(admissionDate)){
+            Toast.makeText(this,"Please enter the Admission Date",Toast.LENGTH_SHORT).show();
+        }
+
+        else{
+                    openDialog();
+        }
 
 
     }

@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ViewStudent"/>
-        <activity android:name=".PendingStudentList"></activity>
+        <activity android:name=".PendingStudentList" />
         <activity android:name=".AdminList" />
         <activity android:name=".AdminView" />
         <activity android:name=".AdminAdd" /> <!-- activity android:name=".AdminLogin"/ -->

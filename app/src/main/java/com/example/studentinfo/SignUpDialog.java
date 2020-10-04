@@ -22,9 +22,9 @@ public class SignUpDialog extends AppCompatDialogFragment {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 
-                        Intent veiwstudent = new Intent(getActivity() ,ViewStudent.class);
+                        Intent login = new Intent(getActivity() ,Login.class);
 
-                        startActivity(veiwstudent);
+                        startActivity(login);
 
                     }
                 });
