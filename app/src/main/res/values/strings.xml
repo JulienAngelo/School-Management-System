@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!--                    DAVID                        -->
 
@@ -110,4 +110,38 @@
     <string name="admin_first_name_hint">First Name</string>
     <string name="admin_last_name_hint">Last Name</string>
     <string name="add_admin_button">Add New Admin</string>
+
+
+    <!-- Dhananjaya -->
+    <!--string name="app_name" tools:ignore="DuplicateDefinition">Dashboard01</string-->
+    <string name="first_status">Status</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="first_paid_status">Not Paid</string>
+    <string name="first_full_payment">full payment</string>
+    <string name="first_balance">balance</string>
+    <string name="third_amount">Rs20.000/=</string>
+    <string name="third_term">Third Term</string>
+    <string name="third_balance_amount">Rs30.000/=</string>
+    <string name="second_balance">balance</string>
+    <string name="third_balance">balance</string>
+    <string name="first_paid_amount">paid amount</string>
+    <string name="second_paid_amount">paid amount</string>
+    <string name="ftodo">TODO</string>
+    <string name="first_full_payment_amount">Rs50.000/=</string>
+    <string name="second_status">Status</string>
+    <string name="second_balance_amount">Rs00.000/=</string>
+    <string name="second_full_payment">full payment</string>
+    <string name="third_full_payment">full payment</string>
+    <string name="first_term">First Term</string>
+    <string name="second_amount">Rs50.000/=</string>
+    <string name="first_amount">Rs10.000/=</string>
+    <string name="first_balance_amount">Rs40.000/=</string>
+    <string name="third_paid_amount">paid amount</string>
+    <string name="todo">TODO</string>
+    <string name="second_term">Second Term</string>
+    <string name="third_full_payment_amount">Rs50.000/=</string>
+    <string name="second_paid_status">Paid</string>
+    <string name="third_paid_status">Not Paid</string>
+    <string name="second_full_payment_amount">Rs50.000/=</string>
+    <string name="third_status">Status</string>
 </resources>

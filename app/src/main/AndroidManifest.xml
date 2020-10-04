@@ -13,7 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PendingStudentList"></activity>
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/gradientfour" />
+
+        <!--activity android:name=".PaymentAdd"/-->
+        <activity android:name=".PendingStudentList" />
         <activity android:name=".AdminList" />
         <activity android:name=".AdminView" />
         <activity android:name=".AdminAdd" /> <!-- activity android:name=".AdminLogin"/ -->
@@ -29,8 +35,9 @@
         <activity android:name=".NewStudentInfo" />
         <activity android:name=".Create_Account" />
         <activity android:name=".DashBoard" />
-        <activity android:name=".Student_DashBoard" />
-        <activity android:name=".AdminLogin">
+        <activity android:name=".AdminLogin" />
+        <!--activity android:name=".Student_DashBoard"-->
+        <activity android:name=".PaymentAdd">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
