@@ -2,5 +2,6 @@
 <resources>
     <item name="charview2" type="id" />
     <item name="charview1" type="id" />
+    <item name="button_get" type="id" />
 
 </resources>

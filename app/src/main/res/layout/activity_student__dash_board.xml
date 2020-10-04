@@ -5,6 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:scaleType="centerCrop"
+    android:background="@drawable/dbbackground"
     android:fillViewport="false"
     tools:context=".Student_DashBoard">
 
@@ -12,6 +15,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
+
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -119,6 +126,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
+                                android:id="@+id/ffp"
                                 android:layout_width="133dp"
                                 android:layout_height="70dp"
                                 android:layout_marginLeft="-15dp"
@@ -164,6 +172,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
+                                android:id="@+id/fpa"
                                 android:layout_width="133dp"
                                 android:layout_height="match_parent"
                                 android:gravity="center"
@@ -209,11 +218,12 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:layout_width="115dp"
-                                android:layout_height="match_parent"
+                                android:id="@+id/fb"
+                                android:layout_width="132dp"
+                                android:layout_height="77dp"
+                                android:layout_marginLeft="-15dp"
                                 android:gravity="center"
                                 android:text="@string/first_balance_amount"
-                                android:layout_marginLeft="-15dp"
                                 android:textAlignment="center"
                                 android:textSize="18sp" />
 
@@ -327,6 +337,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
+                                android:id="@+id/sfp"
                                 android:layout_width="128dp"
                                 android:layout_height="match_parent"
                                 android:gravity="center"
@@ -372,6 +383,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
+                                android:id="@+id/spa"
                                 android:layout_width="126dp"
                                 android:layout_height="match_parent"
                                 android:gravity="center"
@@ -400,7 +412,7 @@
                         app:cardElevation="10dp">
 
                         <LinearLayout
-                            android:layout_width="126dp"
+                            android:layout_width="128dp"
                             android:layout_height="match_parent"
                             android:background="@drawable/gradientthree"
                             android:orientation="vertical">
@@ -408,20 +420,21 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="-15dp"
                                 android:paddingTop="5dp"
                                 android:text="@string/third_balance"
-                                android:layout_marginLeft="-15dp"
                                 android:textAlignment="center"
                                 android:textColor="#fff"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
                             <TextView
+                                android:id="@+id/sb"
                                 android:layout_width="126dp"
                                 android:layout_height="match_parent"
+                                android:layout_marginLeft="-15dp"
                                 android:gravity="center"
                                 android:text="@string/second_balance_amount"
-                                android:layout_marginLeft="-15dp"
                                 android:textAlignment="center"
                                 android:textSize="18sp" />
 
@@ -534,6 +547,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
+                                android:id="@+id/tfp"
                                 android:layout_width="128dp"
                                 android:layout_height="match_parent"
                                 android:gravity="center"
@@ -579,6 +593,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
+                                android:id="@+id/tpa"
                                 android:layout_width="126dp"
                                 android:layout_height="match_parent"
                                 android:gravity="center"
@@ -624,6 +639,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
+                                android:id="@+id/tb"
                                 android:layout_width="126dp"
                                 android:layout_height="match_parent"
                                 android:gravity="center"

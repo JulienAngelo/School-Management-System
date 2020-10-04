@@ -71,7 +71,7 @@
                         android:layout_height="500dp"
                         android:layout_marginStart="0dp"
                         android:layout_marginTop="20dp"
-                        android:alpha="0.6"
+                        android:alpha="0.8"
                         android:contentDescription="@string/rectangle_issue"
                         android:src="@drawable/issue_rectangle" />
 
