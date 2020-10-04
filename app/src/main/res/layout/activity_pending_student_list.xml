@@ -49,13 +49,21 @@
                     android:background="@drawable/searchtxtbox"
                     android:imeOptions="actionSearch" />
 
-                <ImageView
+                <!--ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:src="@drawable/logout"
                     android:layout_marginStart="320dp"
                     android:layout_marginTop="23dp"
-                    android:contentDescription="@string/logout" />
+                    android:contentDescription="@string/logout" /-->
+
+                <ImageView
+                    android:id="@+id/newStdAddId"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/adminbutton"
+                    android:layout_marginStart="313dp"
+                    android:layout_marginTop="1dp" />
 
             </RelativeLayout>
         </LinearLayout>

@@ -5,6 +5,8 @@ public class Admin {
     private String firstName;
     private String lastName;
     private String purl;
+    private String status;
+    private String createdDate;
 
     public Admin() {
     }
@@ -41,7 +43,19 @@ public class Admin {
         this.purl = purl;
     }
 
-    public String toString() {
-        return "Admin ID " + this.adminId + "\n" + "First Name " + firstName;
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(String createdDate) {
+        this.createdDate = createdDate;
     }
 }

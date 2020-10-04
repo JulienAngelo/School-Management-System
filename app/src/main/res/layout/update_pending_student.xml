@@ -20,7 +20,8 @@
         android:hint="Image URL"
         android:id="@+id/pSTDUiImgURLId"
         android:layout_marginTop="10dp"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:enabled="false" />
 
     <EditText
         android:layout_width="match_parent"
@@ -28,13 +29,56 @@
         android:hint="First Name"
         android:id="@+id/pSTDUFirstNameId"
         android:layout_marginTop="10dp"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:enabled="false" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Last Name"
         android:id="@+id/pSTDULastNameId"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:enabled="false" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:id="@+id/pSTDUPasswordId"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mobile Number"
+        android:id="@+id/pSTDUMobileNoId"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:enabled="false" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Term 1 Amount"
+        android:id="@+id/pSTDUTerm1AmtId"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Term 2 Amount"
+        android:id="@+id/pSTDUTerm2AmtId"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Term 3 Amount"
+        android:id="@+id/pSTDUTerm3AmtId"
         android:layout_marginTop="10dp"
         android:textSize="20sp"/>
 
