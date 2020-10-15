@@ -1,26 +1,26 @@
 package com.example.studentinfo.SendNotification;
 
 public class Data {
-    private String Title;
-    private String Message;
+    private String studentId;
+    private String description;
 
     public Data(String title, String message){
-        Title = title;
-        Message = message;
+        studentId = title;
+        description = message;
     }
     public Data(){
 
     }
     public String getTitle(){
-        return Title;
+        return studentId;
     }
     public void setTitle(String title){
-        Title = title;
+        studentId = title;
     }
     public String getMessage(){
-        return Message;
+        return description;
     }
     public void setMessage(String message){
-        Message = message;
+        description = message;
     }
 }

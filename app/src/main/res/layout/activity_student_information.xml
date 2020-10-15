@@ -49,9 +49,9 @@
             android:layout_marginTop="9dp"
             android:contentDescription="@string/student_logo" />
             <ImageView
-                android:layout_width="400dp"
+                android:layout_width="430dp"
                 android:layout_height="57dp"
-                android:layout_marginTop="511dp"
+                android:layout_marginTop="630dp"
                 android:contentDescription="@string/admin_footer"
                 android:src="@drawable/admin_footer" />
 
@@ -61,14 +61,14 @@
             android:layout_height="120dp"
             android:src="@drawable/student_profile"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="220dp"
+            android:layout_marginTop="280dp"
             android:contentDescription="@string/student_profile" />
         <ImageView
             android:id="@+id/st_dashboard"
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:src="@drawable/student_dash_board"
-            android:layout_marginTop="220dp"
+            android:layout_marginTop="280dp"
             android:layout_marginStart="200dp"
             android:contentDescription="@string/student_dash_board" />
 
@@ -78,7 +78,7 @@
             android:layout_height="120dp"
             android:src="@drawable/issue_review"
             android:layout_marginStart="125dp"
-            android:layout_marginTop="360dp"
+            android:layout_marginTop="420dp"
             android:contentDescription="@string/issue_review" />
 
 

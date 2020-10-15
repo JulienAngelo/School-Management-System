@@ -20,19 +20,20 @@
             android:src="@drawable/pro" />
 
         <TextView
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="56dp"
             android:layout_marginTop="115dp"
             android:fontFamily="cursive"
-            android:id="@+id/app_name"
+            android:id="@+id/nav_name"
             android:text="David Oodugama"
             android:textColor="#FFFFFF"
             android:textSize="24sp" />
 
         <TextView
             android:id="@+id/menu_slogan"
-            android:layout_above="@id/app_name"
+            android:layout_above="@id/nav_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

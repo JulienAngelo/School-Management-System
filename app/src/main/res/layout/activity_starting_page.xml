@@ -7,10 +7,10 @@
 
     <ImageView
         android:id="@+id/img"
-        android:layout_width="900dp"
-        android:layout_height="1300dp"
-        android:layout_marginTop="-510dp"
-        android:layout_marginStart="-368dp"
+        android:layout_width="1100dp"
+        android:layout_height="1410dp"
+        android:layout_marginTop="-530dp"
+        android:layout_marginStart="-480dp"
         android:src="@drawable/open"
         android:contentDescription="@string/starting" />
 </LinearLayout>

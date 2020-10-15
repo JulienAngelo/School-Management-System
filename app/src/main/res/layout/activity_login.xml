@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -18,9 +18,9 @@
 
     <ImageView
         android:layout_width="460dp"
-        android:layout_height="350dp"
+        android:layout_height="250dp"
         android:src="@drawable/login_footer"
-        android:layout_marginTop="450dp"
+        android:layout_marginTop="505dp"
         android:layout_marginStart="-400dp"/>
 
         <ImageView
@@ -52,7 +52,7 @@
         android:background="@drawable/login_button"
         android:layout_width="260dp"
         android:layout_height="50dp"
-        android:hint="Password"
+        android:hint="@string/password"
         android:padding="10dp"
         android:drawablePadding="25dp"
         android:drawableStart="@drawable/lock"
@@ -68,7 +68,8 @@
         android:layout_height="60dp"
         android:src="@drawable/submit"
         android:layout_marginTop="370dp"
-        android:layout_marginStart="35dp"
+        android:layout_marginStart="30dp"
+        android:onClick="login"
         />
 
     <TextView
@@ -93,4 +94,4 @@
         android:layout_marginBottom="50dp"
         />
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

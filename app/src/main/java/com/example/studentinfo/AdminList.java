@@ -1,22 +1,19 @@
 package com.example.studentinfo;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.SearchView;
 
-import com.example.studentinfo.domain.Admin;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.studentinfo.adapter.AdminAdapter;
+import com.example.studentinfo.domain.Admin;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -72,7 +69,6 @@ public class AdminList extends AppCompatActivity {
 
         myAdapter = new AdminAdapter(options);
         recyclerView.setAdapter(myAdapter);
-
     }
 
     @Override

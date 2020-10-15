@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -25,7 +24,7 @@
                 android:layout_height="80dp"
                 android:src="@mipmap/ic_launcher"
                 android:layout_gravity="center_vertical"
-                android:id="@+id/issue_img1"
+                android:id="@+id/payment_img1"
                 app:civ_border_width="2dp"
                 app:civ_border_color="#FF000000"/>
 
@@ -38,7 +37,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:id="@+id/issue_student_id"
+                    android:id="@+id/payment_student_id"
                     android:text="@string/this_is_student_id"
                     android:textStyle="bold"
                     android:textSize="25sp"
@@ -48,35 +47,41 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:id="@+id/issue_description"
-                    android:text="This is Description"
+                    android:id="@+id/payment_term"
+                    android:text="Term : 1"
                     android:textSize="25sp"
-                    android:textColor="#000"/>
+                    android:textColor="#000" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/payment_payment"
+                    android:text="Payment : 30000"
+                    android:textSize="25sp"
+                    android:textColor="#000"
+                    android:layout_marginStart="10dp" />
             </androidx.appcompat.widget.LinearLayoutCompat>
-
         </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/payment_view"
+                    android:src="@drawable/viewbtn" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="-20dp"
-                android:id="@+id/issue_editIcon"
-                android:src="@drawable/viewbtn" />
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="57dp"
+                    android:id="@+id/payment_Delete"
+                    android:src="@drawable/delete"
+                    android:layout_marginTop="-4dp"
+                    android:layout_marginLeft="28dp"
+                    />
 
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:id="@+id/issue_deleteIcon"
-                android:src="@drawable/deletebtn"
-                android:layout_marginStart="50dp"
-                />
+    </LinearLayout>
 
-
-        </LinearLayout>
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

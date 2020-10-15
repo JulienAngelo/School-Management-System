@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.studentinfo.adapter.IssueAdapter;
-import com.example.studentinfo.domain.Issue;
+import com.example.studentinfo.domain.IssueReview;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -25,7 +25,7 @@ public class IssueList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_issue_list);
 
-        searchBox = findViewById(R.id.pSTDSearchBoxId);
+        searchBox = (EditText)findViewById(R.id.issueSearchBoxId);
 
         searchBox.addTextChangedListener(new TextWatcher() {
             @Override
@@ -48,10 +48,10 @@ public class IssueList extends AppCompatActivity {
             }
         });
 
-        recyclerView = findViewById(R.id.pendingStdRecView);
+        recyclerView = (RecyclerView) findViewById(R.id.issue_recview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        FirebaseRecyclerOptions<Issue> options = new FirebaseRecyclerOptions.Builder<Issue>().setQuery(FirebaseDatabase.getInstance().getReference().child("Issue"), Issue.class).build();
+        FirebaseRecyclerOptions<IssueReview> options = new FirebaseRecyclerOptions.Builder<IssueReview>().setQuery(FirebaseDatabase.getInstance().getReference().child("Issue_Review"), IssueReview.class).build();
 
         issueAdapter = new IssueAdapter(options);
         recyclerView.setAdapter(issueAdapter);
@@ -70,7 +70,7 @@ public class IssueList extends AppCompatActivity {
     }
 
     private void processSearch(String s) {
-        FirebaseRecyclerOptions<Issue> options = new FirebaseRecyclerOptions.Builder<Issue>().setQuery(FirebaseDatabase.getInstance().getReference().child("Issue").orderByChild("studentId").startAt(s).endAt(s+"\uf8ff"), Issue.class).build();
+        FirebaseRecyclerOptions<IssueReview> options = new FirebaseRecyclerOptions.Builder<IssueReview>().setQuery(FirebaseDatabase.getInstance().getReference().child("Issue_Review").orderByChild("studentId").startAt(s).endAt(s+"\uf8ff"), IssueReview.class).build();
         issueAdapter = new IssueAdapter(options);
         issueAdapter.startListening();
         recyclerView.setAdapter(issueAdapter);

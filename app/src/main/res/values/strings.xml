@@ -2,7 +2,7 @@
 
     <!--                    DAVID                        -->
 
-    <string name="app_name">Student Info</string>
+    <string name="app_name">Student Connect</string>
 
     <string name="home">Home</string>
     <string name="search">Search</string>
@@ -11,7 +11,7 @@
     <string name="logout">LogOut</string>
     <string name="slogan">Committed To Excellence In Education</string>
     <string name="logo">School Management</string>
-    <string name="Issue">If you have any Issues regarding fees or any other issue we would like to know it. </string>
+    <string name="Issue">If you have any Issues regarding fees or any other issueReview we would like to know it. </string>
     <string name="expire">password expire in 365 days left</string>
     <string name="Financial_tot_Payment">Total Payments:</string>
     <string name="Financial_tot_Balance">Total Balance:</string>
@@ -111,4 +111,5 @@
     <string name="admin_last_name_hint">Last Name</string>
     <string name="add_admin_button">Add New Admin</string>
     <string name="this_is_student_id">This is Student Id</string>
+    <string name="password">Password</string>
 </resources>

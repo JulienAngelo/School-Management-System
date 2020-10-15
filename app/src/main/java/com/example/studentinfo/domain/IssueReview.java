@@ -1,17 +1,18 @@
 package com.example.studentinfo.domain;
 
-public class Issue {
-
-int studentId;
-String description ,spinner;
+public class IssueReview {
 
 
-    public Issue(int studentId ,String description, String spinner) {
+String studentId,description ,spinner, purl;
+
+    public IssueReview() {
+    }
+
+    public IssueReview(String studentId , String description, String spinner) {
         this.studentId = studentId;
         this.description = description;
         this.spinner = spinner;
     }
-
     public String getSpinner() {
         return spinner;
     }
@@ -20,11 +21,11 @@ String description ,spinner;
         this.spinner = spinner;
     }
 
-    public int getStudentId() {
+    public String  getStudentId() {
         return studentId;
     }
 
-    public void setStudentId(int studentId) {
+    public void setStudentId(String studentId) {
         this.studentId = studentId;
     }
 
@@ -34,5 +35,13 @@ String description ,spinner;
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getPurl() {
+        return purl;
+    }
+
+    public void setPurl(String purl) {
+        this.purl = purl;
     }
 }

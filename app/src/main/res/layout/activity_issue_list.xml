@@ -39,7 +39,7 @@
                     android:src="@drawable/nav3" />
 
                 <EditText
-                    android:id="@+id/adminSearchBoxId"
+                    android:id="@+id/issueSearchBoxId"
                     android:layout_width="220dp"
                     android:layout_height="35dp"
                     android:layout_marginStart="75dp"
@@ -48,20 +48,19 @@
                     android:hint="Search....."
                     android:background="@drawable/searchtxtbox"
                     android:imeOptions="actionSearch"/>
-
                 <ImageView
-                    android:id="@+id/adminAddId"
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
-                    android:src="@drawable/adminbutton"
-                    android:layout_marginStart="313dp"
-                    android:layout_marginTop="1dp" />
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/logout"
+                    android:layout_marginStart="320dp"
+                    android:layout_marginTop="23dp"
+                    android:contentDescription="@string/logout" />
 
             </RelativeLayout>
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recview"
+            android:id="@+id/issue_recview"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginStart="1dp"

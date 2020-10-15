@@ -12,7 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.studentinfo.domain.Issue;
+import com.example.studentinfo.domain.IssueReview;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -28,7 +28,6 @@ public class Issue_Review extends AppCompatActivity {
     private Spinner spinner;
     private EditText issue_description;
     private ImageView issue_submit;
-    Issue_memeber member;
     FirebaseDatabase database;
     DatabaseReference reference;
     int maxid = 0;
@@ -89,18 +88,29 @@ public class Issue_Review extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                database = FirebaseDatabase.getInstance();
-                reference = FirebaseDatabase.getInstance().getReference("Issue_Review");
-
-                int  student_Id =  Integer.parseInt(issue_student_id.getText().toString());
+                String student_Id =  issue_student_id.getText().toString();
                 String description = issue_description.getText().toString();
                 String spinner1 = spinner.getSelectedItem().toString();
 
-                Issue issue = new Issue(student_Id,description,spinner1);
-                reference.child(String.valueOf(student_Id)).setValue(issue);
-                Toast.makeText(Issue_Review.this,"Thank you for your response.",Toast.LENGTH_LONG).show();
+                database = FirebaseDatabase.getInstance();
+                reference = FirebaseDatabase.getInstance().getReference("Issue_Review");
 
-
+                if(student_Id == null){
+                    issue_student_id.setError("Please enter your student Id");
+                    issue_student_id.requestFocus();
+                }
+                else if (description.isEmpty()){
+                    issue_description.setError("Please enter your password");
+                    issue_description.requestFocus();
+                }
+                else if(student_Id.isEmpty() && description.isEmpty()){
+                    Toast.makeText(Issue_Review.this,"Fields are empty",Toast.LENGTH_SHORT).show();
+                }
+                else if(!(student_Id.isEmpty() && description.isEmpty())) {
+                    IssueReview issueReview = new IssueReview(student_Id, description, spinner1);
+                    reference.child(String.valueOf(student_Id)).setValue(issueReview);
+                    Toast.makeText(Issue_Review.this, "Thank you for your response.", Toast.LENGTH_LONG).show();
+                }
             }
         });
 

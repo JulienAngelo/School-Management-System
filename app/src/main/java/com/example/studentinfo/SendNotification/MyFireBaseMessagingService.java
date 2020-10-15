@@ -12,17 +12,17 @@ import com.google.firebase.messaging.RemoteMessage;
 
 public class MyFireBaseMessagingService extends FirebaseMessagingService {
 
-    String title,message,receiver;
+    String studentId, description;
 
     @Override
     public void onMessageReceived(@NonNull RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
-        title = remoteMessage.getData().get("Title");
-        message = remoteMessage.getData().get("Message");
+        studentId = remoteMessage.getData().get("studentId");
+        description = remoteMessage.getData().get("description");
 
         NotificationCompat.Builder builder =
-                new NotificationCompat.Builder(getApplicationContext()).setSmallIcon(R.drawable.ic_android_black_24dp).setContentTitle(title)
-                .setContentText(message);
+                new NotificationCompat.Builder(getApplicationContext()).setSmallIcon(R.drawable.ic_android_black_24dp).setContentTitle(studentId)
+                .setContentText(description);
         NotificationManager manager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
         manager.notify(0,builder.build());
     }
