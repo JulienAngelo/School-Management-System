@@ -1,6 +1,8 @@
 package com.example.studentinfo;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,49 +13,76 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 public class Student_DashBoard extends AppCompatActivity {
-    TextView ftFullPayment,ftPaidAmount,ftBalance,stFullPayment,stPaidAmount,stBalance,ttFullPayment,ttPaidAmount,ttBalance;
+    TextView fpa,spa,tpa,b1,b2,b3;
      Button button_get;
     DatabaseReference reff;
+    String stid;
+    int p1=0;
+    int p2=0;
+    int p3=0;
+    int ffp=50000;
+    int balance=0;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student__dash_board);
-        ftFullPayment = (TextView)findViewById(R.id.ffp);
-        ftPaidAmount = (TextView)findViewById(R.id.fpa);
-        ftBalance = (TextView)findViewById(R.id.fb);
-        stFullPayment = (TextView)findViewById(R.id.sfp);
-        stPaidAmount = (TextView)findViewById(R.id.spa);
-        stBalance = (TextView)findViewById(R.id.sb);
-        ttFullPayment = (TextView)findViewById(R.id.tfp);
-        ttPaidAmount = (TextView)findViewById(R.id.tpa);
-        ttBalance = (TextView)findViewById(R.id.tb);
+        b1 = (TextView)findViewById(R.id.b1);
+        b2 = (TextView)findViewById(R.id.b2);
+        b3 = (TextView)findViewById(R.id.b3);
+        fpa = (TextView)findViewById(R.id.fpa);
+        spa = (TextView)findViewById(R.id.spa);
+        tpa = (TextView)findViewById(R.id.tpa);
+        Intent intent = getIntent();
+        stid = intent.getStringExtra("st_id");
+
            button_get = (Button)findViewById(R.id.button_get);
             button_get.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            reff = FirebaseDatabase.getInstance().getReference().child("StudentPendingApproval").child("Student107");
+            reff = FirebaseDatabase.getInstance().getReference().child("Payment").child(stid);
             reff.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    String ftFullPaymenttxt = snapshot.child("ftFullPaymenttxt").getValue().toString();
-                    String ftPaidAmounttxt = snapshot.child("ftPaidAmounttxt").getValue().toString();
-                    String ftBalancetxt = snapshot.child("ftBalancetxt").getValue().toString();
-                    String stFullPaymenttxt = snapshot.child("stFullPaymenttxt").getValue().toString();
-                    String stPaidAmounttxt = snapshot.child(" stPaidAmounttxt").getValue().toString();
-                    String stBalancetxt = snapshot.child("stBalancetxt").getValue().toString();
-                    String ttFullPaymenttxt = snapshot.child("ttFullPaymenttxt").getValue().toString();
-                    String ttPaidAmounttxt = snapshot.child("ttPaidAmounttxt").getValue().toString();
-                    String ttBalancetxt = snapshot.child("ttBalancetxt").getValue().toString();
-                    ftFullPayment.setText(ftFullPaymenttxt);
-                    ftPaidAmount.setText(ftPaidAmounttxt);
-                    ftBalance.setText( ftBalancetxt);
-                    stFullPayment.setText(stFullPaymenttxt);
-                    stPaidAmount.setText(stPaidAmounttxt);
-                    stBalance.setText(stBalancetxt);
-                    ttFullPayment.setText(ttFullPaymenttxt);
-                    ttPaidAmount.setText(ttPaidAmounttxt);
-                    ttBalance.setText(ttBalancetxt);
+                    String firstPayment = snapshot.child("payment").getValue().toString();
+                    String secondPayment = snapshot.child("payment").getValue().toString();
+                    String thirdPayment = snapshot.child("payment").getValue().toString();
+                    String term = snapshot.child("term").getValue().toString();
+
+//                    fpa.setText(firstPayment);
+//                    spa.setText(secondPayment);
+//                    tpa.setText(thirdPayment);
+                    if (term.equals("1st"))
+
+                    {
+
+                        p1=p1+Integer.parseInt(firstPayment);
+                        balance=ffp-p1;
+                        fpa.setText(firstPayment);
+                        b1.setText(balance);
+                    }
+                    else if(term.equals("2nd"))
+                    {   p2=p2+Integer.parseInt(secondPayment);
+                        balance=ffp-p2;
+                        spa.setText(secondPayment);
+                        b2.setText(balance);
+                    }
+                    else if(term.equals("3rd"))
+                    {   p3=p3+Integer.parseInt(thirdPayment);
+                        balance=ffp-p3;
+                        tpa.setText(thirdPayment);
+                        b3.setText(balance);
+                    }
+                    else
+                    {
+
+                    }
+
+
                 }
+
+
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) {
                 }

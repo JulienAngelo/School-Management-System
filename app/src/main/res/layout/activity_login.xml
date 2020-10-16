@@ -64,6 +64,7 @@
 
     <ImageView
         android:id="@+id/login_submit"
+        android:onClick="login"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:src="@drawable/submit"
