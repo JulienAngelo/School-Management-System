@@ -2,6 +2,7 @@ package com.example.studentinfo.adapter;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.telephony.SmsManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +21,10 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.ViewHolder;
 
@@ -30,7 +34,7 @@ import java.util.Map;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class IssueAdapter extends FirebaseRecyclerAdapter<IssueReview, IssueAdapter.MyViewHolder> {
-
+    String msg;
     public IssueAdapter(@NonNull FirebaseRecyclerOptions<IssueReview> options) {
         super(options);
     }
@@ -39,6 +43,7 @@ public class IssueAdapter extends FirebaseRecyclerAdapter<IssueReview, IssueAdap
     protected void onBindViewHolder(@NonNull final MyViewHolder holder, final int position, @NonNull final IssueReview model) {
         holder.studentId.setText(model.getStudentId());
         holder.issueType.setText(model.getSpinner());
+        holder.issue_description.setText(model.getDescription());
 
 
         Glide.with(holder.img.getContext()).load(model.getPurl()).into(holder.img);
@@ -56,6 +61,7 @@ public class IssueAdapter extends FirebaseRecyclerAdapter<IssueReview, IssueAdap
                 final EditText iIssueType = myView.findViewById(R.id.issue_type);
                 ImageView submit = myView.findViewById(R.id.issue_approve);
 
+
                 iStudentId.setText(model.getStudentId());
                 Idescription.setText(model.getDescription());
                 iIssueType.setText(model.getSpinner());
@@ -65,23 +71,39 @@ public class IssueAdapter extends FirebaseRecyclerAdapter<IssueReview, IssueAdap
                 submit.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+
                         Map<String, Object> map = new HashMap<>();
                         map.put("studentId", iStudentId.getText().toString());
                         map.put("description", Idescription.getText().toString());
                         map.put("spinner", iIssueType.getText().toString());
+                        msg = Idescription.getText().toString();
 
                         FirebaseDatabase.getInstance().getReference().child("Issue_Review").child(getRef(position).getKey()).
                                 updateChildren(map).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
                                 dialogPlus.dismiss();
-                                Toast.makeText(holder.img.getContext(), "Successfully Updated.", Toast.LENGTH_SHORT).show();
+                                FirebaseDatabase.getInstance().getReference().child("Issue_Review").child(getRef(position).getKey()).removeValue();
+                                Toast.makeText(holder.img.getContext(), "Msg Sent", Toast.LENGTH_SHORT).show();
+
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
                                 dialogPlus.dismiss();
                                 Toast.makeText(holder.img.getContext(), "Error when updating!", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                        FirebaseDatabase.getInstance().getReference("Student").child("studentId").addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                String mobileNumber = snapshot.child("mobileNumber").getValue(String.class);
+                                sendSMS(mobileNumber);
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+
                             }
                         });
                     }
@@ -93,7 +115,7 @@ public class IssueAdapter extends FirebaseRecyclerAdapter<IssueReview, IssueAdap
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(holder.img.getContext());
-                builder.setTitle("Delete Admin");
+                builder.setTitle("Delete selected Issue");
                 builder.setMessage("Are sure you want to delete?");
                 builder.setIcon(R.drawable.warning);
 
@@ -127,7 +149,7 @@ public class IssueAdapter extends FirebaseRecyclerAdapter<IssueReview, IssueAdap
     class MyViewHolder extends RecyclerView.ViewHolder {
 
         CircleImageView img;
-        TextView studentId, issueType;
+        TextView studentId, issueType,issue_description;
         ImageView edit, delete;
 
         public MyViewHolder(@NonNull View itemView) {
@@ -135,10 +157,18 @@ public class IssueAdapter extends FirebaseRecyclerAdapter<IssueReview, IssueAdap
             img = (CircleImageView)itemView.findViewById(R.id.issue_img1);
             studentId = (TextView)itemView.findViewById(R.id.issue_student_id);
             issueType = (TextView)itemView.findViewById(R.id.issue_description);
-
+            issue_description = (TextView)itemView.findViewById(R.id.issue_description);
             edit = (ImageView)itemView.findViewById(R.id.issue_editIcon);
             delete = (ImageView)itemView.findViewById(R.id.issue_deleteIcon);
 
         }
+    }
+    private void sendSMS(String mobileNumber) {
+        String message = "";
+        SmsManager smsManager = SmsManager.getDefault();
+
+            message = msg;
+
+        smsManager.sendTextMessage(mobileNumber, null, message, null, null);
     }
 }

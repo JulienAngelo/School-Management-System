@@ -16,7 +16,6 @@ public class Student_information extends AppCompatActivity {
 
     private ImageView logout;
     private FirebaseAuth mFirebaseAuth;
-    private FirebaseAuth.AuthStateListener mAuthlistener;
     private FirebaseUser mCurrentUser;
     private APIService apiService;
     private TextView st_name;
@@ -65,15 +64,14 @@ public class Student_information extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Student_information.this,Issue_Review.class);
+                i.putExtra("st_id",st_id);
                 startActivity(i);
             }
         });
+    }
 
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mFirebaseAuth.signOut();
-            }
-        });
+    public void logout(View view) {
+        Intent i = new Intent(Student_information.this,Secondactivity.class);
+        startActivity(i);
     }
 }

@@ -49,11 +49,11 @@ public class SendNotif extends AppCompatActivity {
         noti_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseDatabase.getInstance().getReference().child("Token").child(noti_studentId.getText().toString().trim()).child("token").addListenerForSingleValueEvent(new ValueEventListener() {
+                FirebaseDatabase.getInstance().getReference().child("Token").child(noti_studentId.getText().toString()).child("token").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         String usertoken = snapshot.getValue(String.class);
-                        sendNotifications(usertoken,noti_studentId.getText().toString().trim(),noti_decription.getText().toString().trim());
+                        sendNotifications(usertoken,noti_studentId.getText().toString(),noti_decription.getText().toString());
                     }
 
                     @Override
@@ -70,7 +70,7 @@ public class SendNotif extends AppCompatActivity {
         FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         String refreshToken = FirebaseInstanceId.getInstance().getToken();
         Token token = new Token(refreshToken);
-        FirebaseDatabase.getInstance().getReference("Tokens").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(token);
+        FirebaseDatabase.getInstance().getReference("Tokens").child(firebaseUser.getUid()).setValue(token);
     }
 
     public void sendNotifications(String usertoken, String StudentId, String description) {

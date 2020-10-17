@@ -4,9 +4,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
-import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,48 +12,43 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.studentinfo.adapter.PaymentAdapter;
 import com.example.studentinfo.domain.Payment;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
-import java.math.BigDecimal;
 
 public class Financial_Dashboard extends AppCompatActivity {
 
-    private TextView Tot_payments;
-    DatabaseReference reff;
+   // private TextView Tot_payments;
+   // DatabaseReference reff;
     RecyclerView recyclerView;
     PaymentAdapter paymentAdapter;
     EditText searchBox;
-    int pay = 0;
-    float payment1 = (float) 0.00;
+
 
     private DatabaseReference mDatabase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_financial__dashboard);
-        mDatabase = FirebaseDatabase.getInstance().getReference();
-        Tot_payments = findViewById(R.id.tot_payments);
+      //  mDatabase = FirebaseDatabase.getInstance().getReference();
+      //  Tot_payments = findViewById(R.id.tot_payments);
 
-        reff = FirebaseDatabase.getInstance().getReference().child("Issue_Review");
+       /* reff = FirebaseDatabase.getInstance().getReference("Payment").child("payment");
         reff.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot myDataSnapsot: snapshot.getChildren()){
-                    Payment payment = myDataSnapsot.getValue(Payment.class);
+                   String payment1 = myDataSnapsot.child("payment").getValue(String.class);
                     BigDecimal tot = BigDecimal.ZERO;
-                    BigDecimal  payment1 = new BigDecimal(String.valueOf(payment));
-                    tot = tot.add(payment1);
+                    BigDecimal  pay = new BigDecimal(String.valueOf(payment1));
+                    tot = tot.add(pay);
+                    Tot_payments.setText(tot.toString());
            }}
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
-        });
+        });*/
         searchBox = (EditText)findViewById(R.id.paymentSearchBoxId);
         searchBox.addTextChangedListener(new TextWatcher() {
             @Override
@@ -83,7 +76,7 @@ public class Financial_Dashboard extends AppCompatActivity {
 
         FirebaseRecyclerOptions<Payment> options = new FirebaseRecyclerOptions.Builder<com.example.studentinfo.domain.Payment>().
                 setQuery(FirebaseDatabase.getInstance().getReference().
-                        child("Payment"), com.example.studentinfo.domain.Payment.class).build();
+                        child("Payment"),Payment.class).build();
         paymentAdapter = new PaymentAdapter(options);
         recyclerView.setAdapter(paymentAdapter);
     }

@@ -31,7 +31,7 @@ public class Issue_Review extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference reference;
     int maxid = 0;
-
+    private String stId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

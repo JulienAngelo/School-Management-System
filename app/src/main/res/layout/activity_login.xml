@@ -63,7 +63,7 @@
         android:textSize="22sp"/>
 
     <ImageView
-        android:id="@+id/login_submit"
+        
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:src="@drawable/submit"

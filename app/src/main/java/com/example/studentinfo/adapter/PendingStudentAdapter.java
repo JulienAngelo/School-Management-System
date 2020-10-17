@@ -138,4 +138,5 @@ public class PendingStudentAdapter extends FirebaseRecyclerAdapter<PendingStuden
             delete = (ImageView)itemView.findViewById(R.id.pStdDeleteIconId);
         }
     }
+
 }

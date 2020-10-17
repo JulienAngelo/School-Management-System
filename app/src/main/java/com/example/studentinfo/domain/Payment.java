@@ -3,12 +3,17 @@ package com.example.studentinfo.domain;
 public class Payment {
     String term, student_indexNo;
     String  full_payment;
-    String payment;
-    public Payment(String term, String student_indexNo, String payment, String full_payment) {
+    String payment,purl;
+
+    public Payment() {
+    }
+
+    public Payment(String term, String student_indexNo, String payment, String full_payment,String purl) {
         this.term = term;
         this.student_indexNo = student_indexNo;
         this.payment = payment;
         this.full_payment = full_payment;
+        this.purl = purl;
     }
     public String getTerm() {
         return term;
@@ -26,6 +31,7 @@ public class Payment {
         this.student_indexNo = student_indexNo;
     }
     public String getPayment() {
+
         return payment;
     }
 
@@ -39,5 +45,13 @@ public class Payment {
 
     public void setFull_payment(String full_payment) {
         this.full_payment = full_payment;
+    }
+
+    public String getPurl() {
+        return purl;
+    }
+
+    public void setPurl(String purl) {
+        this.purl = purl;
     }
 }

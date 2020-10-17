@@ -8,17 +8,17 @@
     android:background="@drawable/second6">
 
     <Button
-        android:id="@+id/adminbutton"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:alpha="0.70"
         android:background="#FFFFFF"
+        android:onClick="adminbutton"
         android:orientation="vertical"
         android:text="Login as Admin"
         android:textColor="#000000"
-        android:textStyle="bold"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/loginbtn"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,16 +26,17 @@
         app:layout_constraintVertical_bias="0.84" />
 
     <Button
-        android:id="@+id/loginbtn"
+        android:id="@+id/button2"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginBottom="240dp"
         android:alpha="0.70"
         android:background="#FFFFFF"
+        android:onClick="loginbtn"
         android:text="Login as Student"
         android:textColor="#000000"
-        android:textStyle="bold"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"

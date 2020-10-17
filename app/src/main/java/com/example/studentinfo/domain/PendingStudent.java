@@ -6,9 +6,18 @@ public class PendingStudent {
     private String firstName;
     private String lastName;
     private String purl;
+    private String mobileNumber;
 
     public PendingStudent() {
 
+    }
+
+    public String getMobileNumber() {
+        return mobileNumber;
+    }
+
+    public void setMobileNumber(String mobileNumber) {
+        this.mobileNumber = mobileNumber;
     }
 
     public String getStudentId() {

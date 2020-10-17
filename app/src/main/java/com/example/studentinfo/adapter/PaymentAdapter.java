@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.studentinfo.R;
 import com.example.studentinfo.domain.Payment;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -38,7 +39,7 @@ public class PaymentAdapter extends FirebaseRecyclerAdapter<Payment, PaymentAdap
         holder.studentId.setText(model.getStudent_indexNo());
         holder.payment.setText(model.getPayment());
         holder.term.setText(model.getTerm());
-
+        Glide.with(holder.img.getContext()).load(model.getPurl()).into(holder.img);
         holder.edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,11 +48,12 @@ public class PaymentAdapter extends FirebaseRecyclerAdapter<Payment, PaymentAdap
 
                 View myView = dialogPlus.getHolderView();
 
-               // final EditText pURL = myView.findViewById(R.id.pSTDUiImgURLId);
+                final EditText iStudentId = myView.findViewById(R.id.Student_id);
                 final EditText ppayment = myView.findViewById(R.id.up_payment_payment);
                 final EditText pterm = myView.findViewById(R.id.up_payment_term);
                 ImageView submit = myView.findViewById(R.id.payment_submit);
 
+                iStudentId.setText(model.getStudent_indexNo());
                 ppayment.setText(model.getPayment());
                 pterm.setText(model.getTerm());
 
@@ -61,9 +63,10 @@ public class PaymentAdapter extends FirebaseRecyclerAdapter<Payment, PaymentAdap
                     @Override
                     public void onClick(View view) {
                         Map<String, Object> map = new HashMap<>();
-                        //map.put("purl", pURL.getText().toString());
-                        map.put("Payment", ppayment.getText().toString());
-                        map.put("Term", pterm.getText().toString());
+
+                        map.put("payment", ppayment.getText().toString());
+                        map.put("term", pterm.getText().toString());
+                        map.put("studentId", iStudentId.getText().toString());
 
                         FirebaseDatabase.getInstance().getReference().child("Payment").child(getRef(position).getKey()).
                                 updateChildren(map).addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -88,7 +91,7 @@ public class PaymentAdapter extends FirebaseRecyclerAdapter<Payment, PaymentAdap
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(holder.img.getContext());
-                builder.setTitle("Reject Pending Student");
+                builder.setTitle("Reject Payment");
                 builder.setMessage("Are sure you want to reject?");
                 builder.setIcon(R.drawable.warning);
 
@@ -122,7 +125,7 @@ public class PaymentAdapter extends FirebaseRecyclerAdapter<Payment, PaymentAdap
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             img = (CircleImageView)itemView.findViewById(R.id.payment_img1);
-            studentId = (TextView)itemView.findViewById(R.id.payment_student_id);
+            studentId = (TextView)itemView.findViewById(R.id.Student_id);
             term = (TextView)itemView.findViewById(R.id.payment_term);
             payment = (TextView)itemView.findViewById(R.id.payment_payment);
             edit = (ImageView)itemView.findViewById(R.id.payment_view);

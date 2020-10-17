@@ -51,7 +51,8 @@ public class IssueList extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.issue_recview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        FirebaseRecyclerOptions<IssueReview> options = new FirebaseRecyclerOptions.Builder<IssueReview>().setQuery(FirebaseDatabase.getInstance().getReference().child("Issue_Review"), IssueReview.class).build();
+        FirebaseRecyclerOptions<IssueReview> options = new FirebaseRecyclerOptions.Builder<IssueReview>()
+                .setQuery(FirebaseDatabase.getInstance().getReference().child("Issue_Review"), IssueReview.class).build();
 
         issueAdapter = new IssueAdapter(options);
         recyclerView.setAdapter(issueAdapter);
@@ -70,7 +71,8 @@ public class IssueList extends AppCompatActivity {
     }
 
     private void processSearch(String s) {
-        FirebaseRecyclerOptions<IssueReview> options = new FirebaseRecyclerOptions.Builder<IssueReview>().setQuery(FirebaseDatabase.getInstance().getReference().child("Issue_Review").orderByChild("studentId").startAt(s).endAt(s+"\uf8ff"), IssueReview.class).build();
+        FirebaseRecyclerOptions<IssueReview> options = new FirebaseRecyclerOptions.Builder<IssueReview>().setQuery(FirebaseDatabase.getInstance()
+                .getReference().child("Issue_Review").orderByChild("studentId").startAt(s).endAt(s+"\uf8ff"), IssueReview.class).build();
         issueAdapter = new IssueAdapter(options);
         issueAdapter.startListening();
         recyclerView.setAdapter(issueAdapter);
