@@ -11,8 +11,13 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.studentinfo.domain.Admin;
+import com.example.studentinfo.enums.CommonStatus;
+import com.example.studentinfo.constants.CommonConstants;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Date;
+import java.text.SimpleDateFormat;
 
 public class AdminAdd extends AppCompatActivity {
 
@@ -52,9 +57,11 @@ public class AdminAdd extends AppCompatActivity {
                     else if(TextUtils.isEmpty(txtLastName.getText().toString()))
                         Toast.makeText(getApplicationContext(), "Last Name is required!", Toast.LENGTH_SHORT).show();
                     else {
-                        admin.setAdminId(txtAdminId.getText().toString().trim());
+                        admin.setAdminId(CommonConstants.ADMIN_ID_PREFIX+txtAdminId.getText().toString().trim());
                         admin.setFirstName(txtFirstName.getText().toString().trim());
                         admin.setLastName(txtLastName.getText().toString().trim());
+                        admin.setStatus(CommonStatus.ACTVE.toString());
+                        admin.setCreatedDate(formatDate());
 
                         dbRef.child(admin.getAdminId()).setValue(admin);
 
@@ -69,5 +76,12 @@ public class AdminAdd extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private String formatDate() {
+        Date date=new Date();
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        format.setLenient(false);
+        return format.format(date);
     }
 }

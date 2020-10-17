@@ -4,12 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.SearchView;
 
 import com.example.studentinfo.adapter.PendingStudentAdapter;
@@ -22,6 +25,7 @@ public class PendingStudentList extends AppCompatActivity {
     RecyclerView recyclerView;
     PendingStudentAdapter pendingStudentAdapter;
     EditText searchBox;
+    ImageView addButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +52,16 @@ public class PendingStudentList extends AppCompatActivity {
                 } else {
                     processSearch("");
                 }
+            }
+        });
+
+        addButton = findViewById(R.id.newStdAddId);
+
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PendingStudentList.this, PendingStudentAdd.class);
+                startActivity(intent);
             }
         });
 

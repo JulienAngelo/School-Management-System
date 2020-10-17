@@ -1,9 +1,6 @@
 package com.example.studentinfo.domain;
 
-import java.math.BigDecimal;
-
-public class PendingStudent {
-
+public class Student {
     private String studentId;
     private String firstName;
     private String lastName;
@@ -17,7 +14,7 @@ public class PendingStudent {
     private String password;
     private String mobileNumber;
 
-    public PendingStudent() {
+    public Student() {
 
     }
 
