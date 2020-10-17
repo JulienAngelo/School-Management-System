@@ -14,22 +14,17 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 public class Student_DashBoard extends AppCompatActivity {
     TextView fpa,spa,tpa,b1,b2,b3;
+
      Button button_get;
     DatabaseReference reff;
     String stid;
-    int p1=0;
-    int p2=0;
-    int p3=0;
-    int ffp=50000;
-    int balance=0;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student__dash_board);
-        b1 = (TextView)findViewById(R.id.b1);
-        b2 = (TextView)findViewById(R.id.b2);
+        b1 =(TextView) findViewById(R.id.b1);
+        b2 = (TextView) findViewById(R.id.b2);
         b3 = (TextView)findViewById(R.id.b3);
         fpa = (TextView)findViewById(R.id.fpa);
         spa = (TextView)findViewById(R.id.spa);
@@ -50,29 +45,29 @@ public class Student_DashBoard extends AppCompatActivity {
                     String thirdPayment = snapshot.child("payment").getValue().toString();
                     String term = snapshot.child("term").getValue().toString();
 
-//                    fpa.setText(firstPayment);
-//                    spa.setText(secondPayment);
-//                    tpa.setText(thirdPayment);
+
                     if (term.equals("1st"))
 
-                    {
-
+                    {double p1=Integer.parseInt(b1.getText().toString());
                         p1=p1+Integer.parseInt(firstPayment);
-                        balance=ffp-p1;
+                        double balance=(50000-p1);
                         fpa.setText(firstPayment);
-                        b1.setText(balance);
+                        b1.setText(String.valueOf((int) balance));
                     }
                     else if(term.equals("2nd"))
-                    {   p2=p2+Integer.parseInt(secondPayment);
-                        balance=ffp-p2;
+                    {  double p2=Integer.parseInt(b2.getText().toString());
+                        p2=p2+Integer.parseInt(secondPayment);
+                        double balance=(50000-p2);
                         spa.setText(secondPayment);
-                        b2.setText(balance);
+                        b2.setText(String.valueOf((int) balance));
                     }
                     else if(term.equals("3rd"))
-                    {   p3=p3+Integer.parseInt(thirdPayment);
-                        balance=ffp-p3;
+                    {   double p3=Integer.parseInt(b3.getText().toString());
+                        p3=p3+Integer.parseInt(thirdPayment);
+                        double balance=(50000-p3);
                         tpa.setText(thirdPayment);
-                        b3.setText(balance);
+                        b3.setText(String.valueOf((int) balance));
+
                     }
                     else
                     {

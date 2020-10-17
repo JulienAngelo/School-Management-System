@@ -9,7 +9,8 @@ import android.widget.ImageView;
 
 public class AdminPage extends AppCompatActivity {
 
-    private ImageView addAdminBtn, addStudentBtn;
+    private ImageView addAdminBtn, addStudentBtn,addPayment;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +18,15 @@ public class AdminPage extends AppCompatActivity {
         setContentView(R.layout.activity_admin_page);
 
         addAdminBtn = findViewById(R.id.addAdmin);
+        addPayment= findViewById(R.id.addPayment);
+
+        addPayment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AdminPage.this, PaymentAdd.class);
+                startActivity(intent);
+            }
+        });
 
         addAdminBtn.setOnClickListener(new View.OnClickListener() {
             @Override

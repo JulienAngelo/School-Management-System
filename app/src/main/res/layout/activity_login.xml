@@ -42,56 +42,55 @@
         android:drawablePadding="25dp"
         android:drawableStart="@drawable/person"
         android:layout_marginTop="340dp"
-        android:layout_marginStart="-350dp"
+        android:layout_marginStart="-360dp"
         android:inputType="text"
         android:textColorHint="#787878"
         android:textSize="22sp"/>
 
-    <EditText
-        android:id="@+id/login_password"
-        android:background="@drawable/login_button"
-        android:layout_width="260dp"
-        android:layout_height="50dp"
-        android:hint="Password"
-        android:padding="10dp"
-        android:drawablePadding="25dp"
-        android:drawableStart="@drawable/lock"
-        android:layout_marginTop="420dp"
-        android:layout_marginStart="-260dp"
-        android:inputType="textPassword"
-        android:textColorHint="#787878"
-        android:textSize="22sp"/>
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="260dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="-258dp"
+            android:layout_marginTop="420dp"
+            android:background="@drawable/login_button"
+            android:drawableStart="@drawable/lock"
+            android:drawablePadding="25dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColorHint="#787878"
+            android:textSize="22sp" />
 
-    <ImageView
+        <ImageView
         android:id="@+id/login_submit"
         android:onClick="login"
-        android:layout_width="60dp"
+        android:layout_width="50dp"
         android:layout_height="60dp"
         android:src="@drawable/submit"
         android:layout_marginTop="370dp"
-        android:layout_marginStart="35dp"
+        android:layout_marginStart="-10dp"
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
-        android:textSize="34sp"
+        android:textSize="28sp"
         android:layout_marginTop="200dp"
         android:layout_marginStart="-200dp"
-        android:layout_marginBottom="370dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="350dp"
+        android:layout_marginEnd="120dp"
         android:textStyle="bold"/>
 
-    <ImageView
-        android:id="@+id/login_register"
-        android:layout_width="150dp"
-        android:layout_height="30dp"
-        android:src="@drawable/register"
-        android:layout_marginStart="-375dp"
-        android:layout_marginTop="550dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginBottom="50dp"
-        />
+        <ImageView
+            android:id="@+id/login_register"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="-270dp"
+            android:layout_marginTop="550dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginBottom="50dp"
+            android:src="@drawable/register" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
