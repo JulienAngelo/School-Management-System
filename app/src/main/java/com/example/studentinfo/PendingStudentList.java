@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.SearchView;
 
+import com.example.studentinfo.Database.SignUpHelper;
 import com.example.studentinfo.adapter.PendingStudentAdapter;
 import com.example.studentinfo.domain.PendingStudent;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -60,7 +61,7 @@ public class PendingStudentList extends AppCompatActivity {
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PendingStudentList.this, PendingStudentAdd.class);
+                Intent intent = new Intent(PendingStudentList.this, SignUp.class);
                 startActivity(intent);
             }
         });
@@ -68,7 +69,7 @@ public class PendingStudentList extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.pendingStdRecView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        FirebaseRecyclerOptions<PendingStudent> options = new FirebaseRecyclerOptions.Builder<PendingStudent>().setQuery(FirebaseDatabase.getInstance().getReference().child("PendingStudent"), PendingStudent.class).build();
+        FirebaseRecyclerOptions<SignUpHelper> options = new FirebaseRecyclerOptions.Builder<SignUpHelper>().setQuery(FirebaseDatabase.getInstance().getReference().child("StudentPendingApproval"), SignUpHelper.class).build();
 
         pendingStudentAdapter = new PendingStudentAdapter(options);
         recyclerView.setAdapter(pendingStudentAdapter);
@@ -87,7 +88,7 @@ public class PendingStudentList extends AppCompatActivity {
     }
 
     private void processSearch(String s) {
-        FirebaseRecyclerOptions<PendingStudent> options = new FirebaseRecyclerOptions.Builder<PendingStudent>().setQuery(FirebaseDatabase.getInstance().getReference().child("PendingStudent").orderByChild("studentId").startAt(s).endAt(s+"\uf8ff"), PendingStudent.class).build();
+        FirebaseRecyclerOptions<SignUpHelper> options = new FirebaseRecyclerOptions.Builder<SignUpHelper>().setQuery(FirebaseDatabase.getInstance().getReference().child("StudentPendingApproval").orderByChild("admissionNo").startAt(s).endAt(s+"\uf8ff"), SignUpHelper.class).build();
         pendingStudentAdapter = new PendingStudentAdapter(options);
         pendingStudentAdapter.startListening();
         recyclerView.setAdapter(pendingStudentAdapter);

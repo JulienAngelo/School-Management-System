@@ -14,24 +14,29 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.studentinfo.Database.SignUpHelper;
+import com.example.studentinfo.enums.CommonStatus;
 import com.google.firebase.FirebaseApiNotAvailableException;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class SignUp extends AppCompatActivity {
 
     EditText AdmissionNo, StudentFullName, StudentDOB, ParentNIC, ParentName, ParentContact, Address, AdmissionDate;
-
 
     Button SignUp;
 
     FirebaseDatabase rootNode;
     DatabaseReference reference;
 
+    SignUpHelper signUpHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +55,7 @@ public class SignUp extends AppCompatActivity {
         AdmissionDate = findViewById(R.id.admission_date);
         SignUp = findViewById(R.id.signUp);
 
-
+        signUpHelper = new SignUpHelper();
 
         //save data in firebase on button click
         SignUp.setOnClickListener(new View.OnClickListener() {
@@ -68,8 +73,16 @@ public class SignUp extends AppCompatActivity {
                 String parentContact = ParentContact.getText().toString();
                 String address = Address.getText().toString();
                 String admissionDate = AdmissionDate.getText().toString();
+                signUpHelper.setStatus(CommonStatus.PENDING.toString());
+                signUpHelper.setCreatedDate(formatDate());
+                signUpHelper.setPassword("(enter password)");
+                signUpHelper.setFirstTermAmount(BigDecimal.ZERO.toString());
+                signUpHelper.setSecondTermAmount(BigDecimal.ZERO.toString());
+                signUpHelper.setThirdTermAmount(BigDecimal.ZERO.toString());
+                signUpHelper.setFullAmount(BigDecimal.ZERO.toString());
+                signUpHelper.setPurl("https://www.iconfinder.com/data/icons/people-std-pack/512/indian-512.png");
 
-                SignUpHelper signuphelper  = new SignUpHelper(admissionNo,studentFullName,studentDOB,parentNIC,parentName,parentContact,address,admissionDate);
+                SignUpHelper signuphelper  = new SignUpHelper(admissionNo,studentFullName,studentDOB,parentNIC,parentName,parentContact,address,admissionDate, signUpHelper.getPurl(), signUpHelper.getStatus(), signUpHelper.getCreatedDate(), signUpHelper.getFirstTermAmount(), signUpHelper.getSecondTermAmount(), signUpHelper.getThirdTermAmount(), signUpHelper.getFullAmount(), signUpHelper.getPassword());
 
                 reference.child(admissionNo).setValue(signuphelper);
 
@@ -153,6 +166,11 @@ public class SignUp extends AppCompatActivity {
 
     }
 
-
+    private String formatDate() {
+        Date date=new Date();
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        format.setLenient(false);
+        return format.format(date);
+    }
 
 }

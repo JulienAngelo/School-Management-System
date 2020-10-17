@@ -1,9 +1,8 @@
 package com.example.studentinfo.domain;
 
 public class Student {
-    private String studentId;
-    private String firstName;
-    private String lastName;
+    String AdmissionNo, StudentFullName, StudentDOB, ParentNIC, ParentName, ParentContact, Address, AdmissionDate;
+
     private String purl;
     private String status;
     private String createdDate;
@@ -12,34 +11,73 @@ public class Student {
     private String thirdTermAmount;
     private String fullAmount;
     private String password;
-    private String mobileNumber;
 
     public Student() {
 
     }
 
-    public String getStudentId() {
-        return studentId;
+    public String getAdmissionNo() {
+        return AdmissionNo;
     }
 
-    public void setStudentId(String studentId) {
-        this.studentId = studentId;
+    public void setAdmissionNo(String admissionNo) {
+        AdmissionNo = admissionNo;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getStudentFullName() {
+        return StudentFullName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setStudentFullName(String studentFullName) {
+        StudentFullName = studentFullName;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getStudentDOB() {
+        return StudentDOB;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setStudentDOB(String studentDOB) {
+        StudentDOB = studentDOB;
+    }
+
+    public String getParentNIC() {
+        return ParentNIC;
+    }
+
+    public void setParentNIC(String parentNIC) {
+        ParentNIC = parentNIC;
+    }
+
+    public String getParentName() {
+        return ParentName;
+    }
+
+    public void setParentName(String parentName) {
+        ParentName = parentName;
+    }
+
+    public String getParentContact() {
+        return ParentContact;
+    }
+
+    public void setParentContact(String parentContact) {
+        ParentContact = parentContact;
+    }
+
+    public String getAddress() {
+        return Address;
+    }
+
+    public void setAddress(String address) {
+        Address = address;
+    }
+
+    public String getAdmissionDate() {
+        return AdmissionDate;
+    }
+
+    public void setAdmissionDate(String admissionDate) {
+        AdmissionDate = admissionDate;
     }
 
     public String getPurl() {
@@ -104,13 +142,5 @@ public class Student {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getMobileNumber() {
-        return mobileNumber;
-    }
-
-    public void setMobileNumber(String mobileNumber) {
-        this.mobileNumber = mobileNumber;
     }
 }

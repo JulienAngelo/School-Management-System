@@ -52,10 +52,16 @@ public class AdminAdd extends AppCompatActivity {
                 try {
                     if(TextUtils.isEmpty(txtAdminId.getText().toString()))
                         Toast.makeText(getApplicationContext(), "Admin Id is required!", Toast.LENGTH_SHORT).show();
+                    else if(!txtAdminId.getText().toString().matches("^$|[0-9]+"))
+                        Toast.makeText(getApplicationContext(), "Admin Id should be a number!", Toast.LENGTH_SHORT).show();
                     else if(TextUtils.isEmpty(txtFirstName.getText().toString()))
                         Toast.makeText(getApplicationContext(), "First Name is required!", Toast.LENGTH_SHORT).show();
+                    else if(!txtFirstName.getText().toString().matches("^$|^[a-zA-Z]+"))
+                        Toast.makeText(getApplicationContext(), "First Name should be consist with simple or capital letters!", Toast.LENGTH_SHORT).show();
                     else if(TextUtils.isEmpty(txtLastName.getText().toString()))
                         Toast.makeText(getApplicationContext(), "Last Name is required!", Toast.LENGTH_SHORT).show();
+                    else if(!txtLastName.getText().toString().matches("^$|^[a-zA-Z]+"))
+                        Toast.makeText(getApplicationContext(), "Last Name should be consist with simple or capital letters!", Toast.LENGTH_SHORT).show();
                     else {
                         admin.setAdminId(CommonConstants.ADMIN_ID_PREFIX+txtAdminId.getText().toString().trim());
                         admin.setFirstName(txtFirstName.getText().toString().trim());

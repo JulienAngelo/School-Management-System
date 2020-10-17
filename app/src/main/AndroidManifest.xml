@@ -33,7 +33,8 @@
         <activity android:name=".Create_Account" />
         <activity android:name=".DashBoard" />
         <activity android:name=".Student_DashBoard" />
-        <activity android:name=".SignUp">
+        <!--activity android:name=".SignUp"-->
+        <activity android:name=".AdminLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

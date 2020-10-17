@@ -27,16 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="First Name"
-        android:id="@+id/pSTDUFirstNameId"
-        android:layout_marginTop="10dp"
-        android:textSize="20sp"
-        android:enabled="false" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Last Name"
-        android:id="@+id/pSTDULastNameId"
+        android:id="@+id/pSTDUFullNameId"
         android:layout_marginTop="10dp"
         android:textSize="20sp"
         android:enabled="false" />
