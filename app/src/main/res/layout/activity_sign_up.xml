@@ -36,31 +36,44 @@
             android:textSize="20dp"
             android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="34dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="29dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="348dp"
-            android:layout_marginBottom="16dp"
-            android:clickable="true"
-            android:onClick="imageClick"
-            android:src="@drawable/abc_vector_test" />
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+
+            <Button
+                android:id="@+id/back_button"
+                android:layout_width="95dp"
+                android:layout_height="52dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="301dp"
+                android:layout_marginBottom="0dp"
+                android:width="80dp"
+                android:height="80dp"
+                android:background="@drawable/back_arrow" />
+
+        </RelativeLayout>
     </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:alpha="0.6"
+            android:background="@drawable/background"
+            android:gravity="center"
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/student_admission_no"
@@ -89,18 +102,44 @@
                 android:paddingLeft="25dp"
                 android:textColorHint="#3c3b37" />
 
-            <EditText
-                android:id="@+id/student_dob"
-                android:layout_width="280dp"
-                android:layout_height="45dp"
-                android:layout_margin="15dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/signup_formbox"
-                android:elevation="5dp"
-                android:hint="Date of Birth"
-                android:inputType="date"
-                android:paddingLeft="25dp"
-                android:textColorHint="#3c3b37" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="89dp">
+
+
+                <EditText
+                    android:id="@+id/student_dob"
+                    android:layout_width="280dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/signup_formbox"
+                    android:elevation="5dp"
+                    android:hint="Date of Birth"
+                    android:paddingLeft="25dp"
+                    android:textColorHint="#3c3b37"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.335"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.529"
+                    tools:ignore="MissingConstraints" />
+
+                <Button
+                    android:id="@+id/dob_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/student_date"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.934"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.600" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
             <EditText
                 android:id="@+id/gaurdian_nic"
@@ -156,39 +195,64 @@
                 android:paddingLeft="25dp"
                 android:textColorHint="#3c3b37" />
 
-            <EditText
-                android:id="@+id/admission_date"
-                android:layout_width="280dp"
-                android:layout_height="45dp"
-                android:layout_margin="15dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/signup_formbox"
-                android:elevation="5dp"
-                android:hint="Admission Date"
-                android:inputType="date"
-                android:paddingLeft="25dp"
-                android:textColorHint="#3c3b37" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="62dp">
+
+
+                <EditText
+                    android:id="@+id/admission_date"
+                    android:layout_width="280dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/signup_formbox"
+                    android:elevation="5dp"
+                    android:hint="Admission Date"
+                    android:inputType="date"
+                    android:paddingLeft="25dp"
+                    android:textColorHint="#3c3b37"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.274"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.529"
+                    tools:ignore="MissingConstraints" />
+
+                <Button
+                    android:id="@+id/admission_date_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/student_date"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.958"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.531" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <Button
                 android:id="@+id/signUp"
                 android:layout_width="280dp"
                 android:layout_height="45dp"
-                android:text="Sign Up"
-                android:textColor="#fff"
-                android:textAllCaps="true"
                 android:layout_marginTop="25dp"
-                android:elevation="5dp"
                 android:background="@drawable/signup_button"
-                />
+                android:elevation="5dp"
+                android:text="Sign Up"
+                android:textAllCaps="true"
+                android:textColor="#fff" />
 
             <TextView
                 android:id="@+id/terms_and_conditions"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:text="Terms and Conditions apply"
-                android:textColor="#000"
                 android:layout_marginTop="1dp"
-                />
+                android:text="Terms and Conditions apply"
+                android:textColor="#000" />
+
+
 
         </LinearLayout>
     </ScrollView>

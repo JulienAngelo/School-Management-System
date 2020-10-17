@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:openDrawer="start"
+    tools:openDrawer=""
     android:id="@+id/student_drawer_layout"
     tools:context=".Student_information">
 
@@ -41,6 +41,7 @@
             android:contentDescription="@string/nav3"/>
 
         <ImageView
+            android:id="@+id/student_logout"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/logout"

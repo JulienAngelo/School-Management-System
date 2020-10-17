@@ -110,4 +110,13 @@
     <string name="admin_first_name_hint">First Name</string>
     <string name="admin_last_name_hint">Last Name</string>
     <string name="add_admin_button">Add New Admin</string>
+    <string name="invalid_name">Please enter valid fullname</string>
+    <string name="invalid_phone">Please enter valid contact number</string>
+    <string name="invalid_dob">Please enter valid date of birth</string>
+    <string name="invalid_admission_date">Please enter valid admission date</string>
+    <string name="invalid_address">Please enter valid address</string>
+    <string name="invalid_addmission_no">Please enter valid admission number</string>
+    <string name="invalid_nic">Please enter valid NIC</string>
+    <string name="invalid_gaurdian_name">Please enter valid Gaurdian Name</string>
+    <string name="invalid_date_of_birth">Invalid</string>
 </resources>

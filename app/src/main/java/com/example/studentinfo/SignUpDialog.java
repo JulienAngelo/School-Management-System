@@ -10,6 +10,17 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
+/**
+ * SignUpDialog
+ *
+ ************************************
+ *  ###   Date         Batch            Group Id      Group     Author          Description     ITNumber
+ *-------------------------------------------------------------------------------------------------------
+ *    1   03-10-2020   Metro-Weekend    Metro_WE_05   Maniacs   Yoganathan.J.A    Created       IT19067902
+ *
+ ************************************
+ */
+
 public class SignUpDialog extends AppCompatDialogFragment {
 
     @NonNull

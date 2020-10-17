@@ -1,12 +1,20 @@
 package com.example.studentinfo.Database;
-
+/**
+ * SignUpHelper
+ *
+ ************************************
+ *  ###   Date         Batch            Group Id      Group     Author          Description     ITNumber
+ *-------------------------------------------------------------------------------------------------------
+ *    1   03-10-2020   Metro-Weekend    Metro_WE_05   Maniacs   Yoganathan.J.A    Created       IT19067902
+ *
+ ************************************
+ */
 public class SignUpHelper {
 
     String AdmissionNo, StudentFullName, StudentDOB, ParentNIC, ParentName, ParentContact, Address, AdmissionDate;
 
     public SignUpHelper() {
     }
-
     public SignUpHelper(String admissionNo, String studentFullName, String studentDOB, String parentNIC, String parentName, String parentContact, String address, String admissionDate) {
         this.AdmissionNo = admissionNo;
         this.StudentFullName = studentFullName;
@@ -17,7 +25,6 @@ public class SignUpHelper {
         this.Address = address;
         this.AdmissionDate = admissionDate;
     }
-
     public String getAdmissionNo() {
         return AdmissionNo;
     }
@@ -33,7 +40,6 @@ public class SignUpHelper {
     public void setStudentFullName(String studentFullName) {
         this.StudentFullName = studentFullName;
     }
-
     public String getStudentDOB() {
         return StudentDOB;
     }
